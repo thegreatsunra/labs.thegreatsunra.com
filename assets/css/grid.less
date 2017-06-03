@@ -1,0 +1,278 @@
+/* -----------------------------------------------------------------------
+
+DaneGrid Framework
+March 9, 2011
+
+----------------------------------------------------------------------- */
+
+
+/* Edit these variables. For great justice. */
+
+/* @column_width: 6.382978723404255%; */ /* multiplies out to 100% in a 12-column liquid layout */
+@column_width: 60px;
+
+/* @gutter_width: 2.127659574468085%; */ /* multiplies out to 100% in a 12-column liquid layout */
+@gutter_width: 20px;
+
+@column_number: 12;
+
+/*
+Okay, stop editing.
+Unless you're doing something really awesome.
+Like a liquid layout.
+That would be awesome.
+*/
+
+@gutter_number: (@column_number - 1);
+
+@container_width: (@column_width * @column_number) + (@gutter_width * @gutter_number);
+
+@span_1: @column_width; /* 60px (in 940px solid container) */
+@span_2: (@column_width * 2) + @gutter_width; /* 140px */
+@span_3: (@column_width * 3) + (@gutter_width * 2); /* 220px */
+@span_4: (@column_width * 4) + (@gutter_width * 3); /* 300px */
+@span_5: (@column_width * 5) + (@gutter_width * 4); /* 380px */
+@span_6: (@column_width * 6) + (@gutter_width * 5); /* 460px */
+@span_7: (@column_width * 7) + (@gutter_width * 6); /* 540px */
+@span_8: (@column_width * 8) + (@gutter_width * 7); /* 620px */
+@span_9: (@column_width * 9) + (@gutter_width * 8); /* 700px */
+@span_10: (@column_width * 10) + (@gutter_width * 9); /* 780px */
+@span_11: (@column_width * 11) + (@gutter_width * 10); /* 860px */
+@span_12: (@column_width * 12) + (@gutter_width * 11); /* 940px */
+
+/* grid.css */
+.container {
+	width: @container_width;
+	margin: 0 auto 0 auto;
+}
+
+/* styles that apply to all grid column spans */
+/* ----------------------------------------------------------------------- */
+.span-1,
+.span-2,
+.span-3, 
+.span-4, 
+.span-5, 
+.span-6, 
+.span-7, 
+.span-8, 
+.span-9, 
+.span-10, 
+.span-11, 
+.span-12 {
+	display: inline; /* from 960 */
+	position: relative; /* from 960 */
+	float: left;
+	margin-right: @gutter_width;
+}
+
+
+/* styles that apply to each individual grid span */
+/* ----------------------------------------------------------------------- */
+.span-1 { width:@span_1; } /* 60px (in 940px solid container) */
+.span-2 { width:@span_2; } /* 140px */
+.span-3 { width:@span_3; } /* 220px */
+.span-4 { width:@span_4; } /* 300px */
+.span-5 { width:@span_5; } /* 380px */
+.span-6 { width:@span_6; } /* 460px */
+.span-7 { width:@span_7; } /* 540px */
+.span-8 { width:@span_8; } /* 620px */
+.span-9 { width:@span_9; } /* 700px */
+.span-10 { width:@span_10; } /* 780px */
+.span-11 { width:@span_11; } /* 860px */
+.span-12 { width:@span_12; margin-right: 0;} /* 940px */
+
+.last {
+	margin-right: 0 !important;
+}
+
+/* styles for nested grid spans (only necessary for fluid layouts) */
+/* ----------------------------------------------------------------------- */
+/* 
+.span-11 .span-1,
+.span-11 .span-2,
+.span-11 .span-3,
+.span-11 .span-4,
+.span-11 .span-5,
+.span-11 .span-6,
+.span-11 .span-7,
+.span-11 .span-8,
+.span-11 .span-9,
+.span-11 .span-10 {margin-right: (@gutter_width / @span_11) * 100;}
+
+.span-11 .span-1 { width: (@span_1 / @span_11) * 100; }
+.span-11 .span-2 { width: (@span_2 / @span_11) * 100; }
+.span-11 .span-3 { width: (@span_3 / @span_11) * 100; }
+.span-11 .span-4 { width: (@span_4 / @span_11) * 100; }
+.span-11 .span-5 { width: (@span_5 / @span_11) * 100; }
+.span-11 .span-6 { width: (@span_6 / @span_11) * 100; }
+.span-11 .span-7 { width: (@span_7 / @span_11) * 100; }
+.span-11 .span-8 { width: (@span_8 / @span_11) * 100; }
+.span-11 .span-9 { width: (@span_9 / @span_11) * 100; }
+.span-11 .span-10 { width: (@span_10 / @span_11) * 100; }
+
+.span-10 .span-1,
+.span-10 .span-2,
+.span-10 .span-3,
+.span-10 .span-4,
+.span-10 .span-5,
+.span-10 .span-6,
+.span-10 .span-7,
+.span-10 .span-8,
+.span-10 .span-9,
+.span-10 .span-10 {margin-right: (@gutter_width / @span_10) * 100;}
+
+.span-10 .span-1 { width: (@span_1 / @span_10) * 100; }
+.span-10 .span-2 { width: (@span_2 / @span_10) * 100; }
+.span-10 .span-3 { width: (@span_3 / @span_10) * 100; }
+.span-10 .span-4 { width: (@span_4 / @span_10) * 100; }
+.span-10 .span-5 { width: (@span_5 / @span_10) * 100; }
+.span-10 .span-6 { width: (@span_6 / @span_10) * 100; }
+.span-10 .span-7 { width: (@span_7 / @span_10) * 100; }
+.span-10 .span-8 { width: (@span_8 / @span_10) * 100; }
+.span-10 .span-9 { width: (@span_9 / @span_10) * 100; }
+
+.span-9 .span-1,
+.span-9 .span-2,
+.span-9 .span-3,
+.span-9 .span-4,
+.span-9 .span-5,
+.span-9 .span-6,
+.span-9 .span-7,
+.span-9 .span-8 {margin-right: (@gutter_width / @span_9) * 100;}
+
+.span-9 .span-1 { width: (@span_1 / @span_9) * 100; }
+.span-9 .span-2 { width: (@span_2 / @span_9) * 100; }
+.span-9 .span-3 { width: (@span_3 / @span_9) * 100; }
+.span-9 .span-4 { width: (@span_4 / @span_9) * 100; }
+.span-9 .span-5 { width: (@span_5 / @span_9) * 100; }
+.span-9 .span-6 { width: (@span_6 / @span_9) * 100; }
+.span-9 .span-7 { width: (@span_7 / @span_9) * 100; }
+.span-9 .span-8 { width: (@span_8 / @span_9) * 100; }
+
+.span-8 .span-1,
+.span-8 .span-2,
+.span-8 .span-3,
+.span-8 .span-4,
+.span-8 .span-5,
+.span-8 .span-6,
+.span-8 .span-7 {margin-right: (@gutter_width / @span_8) * 100;}
+
+.span-8 .span-1 { width: (@span_1 / @span_8) * 100; }
+.span-8 .span-2 { width: (@span_2 / @span_8) * 100; }
+.span-8 .span-3 { width: (@span_3 / @span_8) * 100; }
+.span-8 .span-4 { width: (@span_4 / @span_8) * 100; }
+.span-8 .span-5 { width: (@span_5 / @span_8) * 100; }
+.span-8 .span-6 { width: (@span_6 / @span_8) * 100; }
+.span-8 .span-7 { width: (@span_7 / @span_8) * 100; }
+
+.span-7 .span-1,
+.span-7 .span-2,
+.span-7 .span-3,
+.span-7 .span-4,
+.span-7 .span-5,
+.span-7 .span-6 {margin-right: (@gutter_width / @span_7) * 100;}
+
+.span-7 .span-1 { width: (@span_1 / @span_7) * 100; }
+.span-7 .span-2 { width: (@span_2 / @span_7) * 100; }
+.span-7 .span-3 { width: (@span_3 / @span_7) * 100; }
+.span-7 .span-4 { width: (@span_4 / @span_7) * 100; }
+.span-7 .span-5 { width: (@span_5 / @span_7) * 100; }
+.span-7 .span-6 { width: (@span_6 / @span_7) * 100; }
+
+.span-6 .span-1,
+.span-6 .span-2,
+.span-6 .span-3,
+.span-6 .span-4,
+.span-6 .span-5 {margin-right: (@gutter_width / @span_6) * 100;}
+
+.span-6 .span-1 { width: (@span_1 / @span_6) * 100; }
+.span-6 .span-2 { width: (@span_2 / @span_6) * 100; }
+.span-6 .span-3 { width: (@span_3 / @span_6) * 100; }
+.span-6 .span-4 { width: (@span_4 / @span_6) * 100; }
+.span-6 .span-5 { width: (@span_5 / @span_6) * 100; }
+
+.span-5 .span-1,
+.span-5 .span-2,
+.span-5 .span-3,
+.span-5 .span-4 {margin-right: (@gutter_width / @span_5) * 100;}
+
+.span-5 .span-1 { width: (@span_1 / @span_5) * 100; }
+.span-5 .span-2 { width: (@span_2 / @span_5) * 100; }
+.span-5 .span-3 { width: (@span_3 / @span_5) * 100; }
+.span-5 .span-4 { width: (@span_4 / @span_5) * 100; }
+
+.span-4 .span-1,
+.span-4 .span-2,
+.span-4 .span-3 {margin-right: (@gutter_width / @span_4) * 100;}
+
+.span-4 .span-1 { width: (@span_1 / @span_4) * 100; }
+.span-4 .span-2 { width: (@span_2 / @span_4) * 100; }
+.span-4 .span-3 { width: (@span_3 / @span_4) * 100; }
+
+.span-3 .span-1,
+.span-3 .span-2 {margin-right: (@gutter_width / @span_3) * 100;}
+
+.span-3 .span-1 { width: (@span_1 / @span_3) * 100; }
+.span-3 .span-2 { width: (@span_2 / @span_3) * 100; }
+
+.span-2 .span-1 {margin-right: (@gutter_width / @span_2) * 100;}
+
+.span-2 .span-1 { width: (@span_1 / @span_2) * 100; }
+*/
+
+/* styles for appending and prepending grid spans */
+/* ----------------------------------------------------------------------- */
+.append-1 { padding-right: (@span_1 + @gutter_width); }
+.append-2 { padding-right: (@span_2 + @gutter_width); }
+.append-3 { padding-right: (@span_3 + @gutter_width); }
+.append-4 { padding-right: (@span_4 + @gutter_width); }
+.append-5 { padding-right: (@span_5 + @gutter_width); }
+.append-6 { padding-right: (@span_6 + @gutter_width); }
+.append-7 { padding-right: (@span_7 + @gutter_width); }
+.append-8 { padding-right: (@span_8 + @gutter_width); }
+.append-9 { padding-right: (@span_9 + @gutter_width); }
+.append-10 { padding-right: (@span_10 + @gutter_width); }
+.append-11 { padding-right: (@span_11 + @gutter_width); }
+
+.prepend-1 { padding-left: (@span_1 + @gutter_width); }
+.prepend-2 { padding-left: (@span_2 + @gutter_width); }
+.prepend-3 { padding-left: (@span_3 + @gutter_width); }
+.prepend-4 { padding-left: (@span_4 + @gutter_width); }
+.prepend-5 { padding-left: (@span_5 + @gutter_width); }
+.prepend-6 { padding-left: (@span_6 + @gutter_width); }
+.prepend-7 { padding-left: (@span_7 + @gutter_width); }
+.prepend-8 { padding-left: (@span_8 + @gutter_width); }
+.prepend-9 { padding-left: (@span_9 + @gutter_width); }
+.prepend-10 { padding-left: (@span_10 + @gutter_width); }
+.prepend-11 { padding-left: (@span_11 + @gutter_width); }
+
+.push-1 { left: (@span_1 + @gutter_width); }
+.push-2 { left: (@span_2 + @gutter_width); }
+.push-3 { left: (@span_3 + @gutter_width); }
+.push-4 { left: (@span_4 + @gutter_width); }
+.push-5 { left: (@span_5 + @gutter_width); }
+.push-6 { left: (@span_6 + @gutter_width); }
+.push-7 { left: (@span_7 + @gutter_width); }
+.push-8 { left: (@span_8 + @gutter_width); }
+.push-9 { left: (@span_9 + @gutter_width); }
+.push-10 { left: (@span_10 + @gutter_width); }
+.push-11 { left: (@span_11 + @gutter_width); }
+
+/* LESS CSS freaks over negatives */
+
+.pull-1 { left: -1 * (@span_1 + @gutter_width); }
+.pull-2 { left: -1 * (@span_2 + @gutter_width); }
+.pull-3 { left: -1 * (@span_3 + @gutter_width); }
+.pull-4 { left: -1 * (@span_4 + @gutter_width); }
+.pull-5 { left: -1 * (@span_5 + @gutter_width); }
+.pull-6 { left: -1 * (@span_6 + @gutter_width); }
+.pull-7 { left: -1 * (@span_7 + @gutter_width); }
+.pull-8 { left: -1 * (@span_8 + @gutter_width); }
+.pull-9 { left: -1 * (@span_9 + @gutter_width); }
+.pull-10 { left: -1 * (@span_10 + @gutter_width); }
+.pull-11 { left: -1 * (@span_11 + @gutter_width); }
+
+.container:before, .container:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.container:after { clear: both; }
+.container { zoom: 1; }

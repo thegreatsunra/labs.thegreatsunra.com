@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Alpine Designer Necronomicon: Content Styles and Formatting</title>
+	<style type="text/css">@import "styles.css";</style>
+</head>
+
+<body>
+
+<h1>Content Styles and Formatting</h1>
+
+<a name="controlFlexibility"></a>
+<h3>Control and Flexibility when Authoring Content</h3>
+<h5>content management, formatting, flexibility, control, semantic structure</h5>
+<p>Alpine typically launch sites with a limited number of options available for text formatting.  The benefits of this are threefold:</p>
+
+<p>First, it helps maintain a consistent appearance across all pages of the site, keeps page-load times at a minimum, and simplifies any global style enhancements that the author may want to make as the site grows (whether it grows in size, audience or sophistication).</p>
+
+<p>Second, it encourages authors to structure their content with header and paragraph styles, which make pages readily accessible to people viewing the website through alternative means, whether the audience is a blind person reading the site via a screen reader, or someone accessing the website through a cell phone, PDA or other web-enabled device.</p>
+
+<p>Finally, this thoughtful approach to structuring content (with important content wrapped in headline styles and paragraph content wrapped in paragraph styles) makes the website highly visible to search engines like Google, who rank sites based on the importance and relevance of their content.</p>
+
+<p>That being said, the editor will often detect specific formatting styles that are applied to the text, and will strip them out with these goals in mind. It is possible to change the settings of the editor to grant more control over how text styles are being formatted, but realize that this may be at the expense of the three points above (namely consistency, accessibility and search engine visibility).</p>
+
+
+<a name="cmsFunctionality"></a>
+<h3>CMS Functionality, Styles and Formatting:
+How editable should our editable content be?</h3>
+<h5>content management, styles, formatting, editability</h5>
+
+<p>This article addresses that fine line between what authors are allowed to edit on their website, what they are allowed to style, and what will be styled for them.</p>
+
+<p>Even with a content management system, we still need to determine how much control (or lack of control) authors will have over the presentation of their page content. At the very mininum, the author must be able to author paragraphs, lists, headers, bold, and italic text. The author must be able to author this stuff, but not necessarily control how it is actually presented.</p>
+
+<p>Ideally, the designer will have defined how each of these styles will be, well, styled; what paragraph text looks like, what an h3 looks like, etc. The benefits of this are threefold: One, it allows the client to author his/her own content, which is a minimum requirement for a CMS.  Two, it ensures that the designer's masterpiece won't be compromised by others' attempts at "designing" their own content. If these style elements have been pre-determined and can be applied to future content, things will continue to look good no matter how much content (or how many pages) are added. Third, it encourages authors to use semantic markup, which improves search engine visability and accessibility (for people who are disabled or who are browsing the internet through alternative means).</p>
+
+<p>It seems we've got three levels of... uhh... well, we could call it Customer Presentation Control, but the acronym for that is CPC, which already stands for Cost Per Click, and really... how lame is something named "Customer Presentation Control"? It's like, what are we, a bunch of losers drafting up design standards?</p>
+
+<p>No. We are not that.  For now, taking a cue from Winamp set to random, we will call this "Boogie Wonderland." For no good reason, other than the fact that we can. The degree to which a customer can alter the presentation of his/her content is hereby known as Boogie Wonderland.</p>
+
+<p>Sketching this out, we've got three levels of Boogie Wonderland:</p>
+
+<p>1. Absolute Designer Control: The CSS stylesheet determines ALL. Clients can use basic tags whose styles have been predetermined (<code>&lt;p&gt; &lt;h1-6&gt; &lt;ul&gt; &lt;ol&gt; &lt;u&gt; &lt;i&gt; &lt;em&gt; &lt;b&gt; and &lt;strong&gt;</code>). Beyond the styles already determined by the global stylesheet (which can look really nice if the person designing them knows what they're doing) the client cannot color his/her own text. The client cannot resize his/her own text. The client can only semantically structure his/her own text by way of paragraphs, headlines, etc. The nice thing about this approach is that any redesigns could take effect globally without needing to edit the format of every individual page.</p>
+
+<p>2. Moderate Client Control: The client has limited control over font size, font color, alignment (centering, left, right, etc.). The stylesheet still determines most styles, but it could be made more robust, offer additional styling options, allow for more inline styles (gasp!), etc.</p>
+
+<p>3. Absolute Client Control: The stylesheet is a huge and massive medusa's head of mere "suggested styles." Client has complete control over fonts, colors, sizes, positioning, etc. Lots of styling takes place inline (rather than globally), so styling future redesigns will be a pain in the neck (and difficult and expensive). Nevertheless, if an author really wants fuscha text on a yellow background, and understands the potential consequences of these stylews, and understands that Content is King and Presentation is The Guy Who Shovels the Stables, we can grant that that power.</p>
+
+<p>So. There you have it. Three different levels of Boogie Wonderland, and the advantages and disadvantages of each.</p>
+
+
+<a name="commonQuestions"></a>
+<h3>Common Questions and Answers for Content Formatting:
+or... "How do I center text?"</h3>
+<h5>content management, styles, formatting, centering text</h5>
+<p>We field calls each week from authors trying to center text.  There are ways for us, internally, to control how text is formatted.  If clients are HTML-savvy we can communicate this to them as well, but mostly this is intended for our own personal use... whether it be for site implementation, content migration, etc.</p>
+
+<p>The problem is this: the whuzziwhig editor writes non-compliant HTML code.  This is a problem with the ActiveX editor tool in Internet Explorer, and is something that we have no control over.  This non-compliant code typically gets into fist-fights with our CSS code (which is the standardized language for web design), and these fights make trying to apply consistent styles unpredictable.  What I've been doing is establishing work-arounds that preserve the same formatting functionality of dirty code, while using predictable CSS code.</p>
+
+<p>To help remedy the chaos, we've been using a program called HTML Tidy, which goes through the HTML code generated by the whuzziwhig editor and makes it clean and happy.  Unfortunately, on a new installation Tidy defaults to a setting called CLEAN, which is like trying to wash the dog with a pressure washer.</p>
+
+<p>When working on a site (at least recently), I've typically used the the local.inc to turn off CLEAN, but leave SWEEP on.  Sweep is a much gentler setting than Clean, but I don't know yet whether it's like washing the dog with a palm sander or with a tooth brush.  I'm still looking at Tidy, figuring out what settings we are using, what settings we want, and what settings we can actually use.  We may need something stronger, we may need something weaker, but it looks like things are functioning with Clean off and Sweep on.  I think.</p>
+
+<p>So.  Clean would go through and take ANY style applied to an element (whether it be align="center" or bgcolor="red" or style="text-align: center" or class="itchy") and replace it with class="c1".  This setting is absolutely worthless, means nothing, and is the reason we can't center text.  What's happening is the actual code for centering the text is stripped out and replaced by... well... nothing meaningful.</p>
+
+<p>With Clean off and Sweep on, we can apply styles at will, though�it behooves us to apply CSS styles to avoid unnecessary fist-fights.  On most recent sites I've defined some basic CSS styles for text formatting. They look like dis:</p>
+
+<pre><code>.hide {display: none;}
+.cloak {visibility: hidden;}
+.floatL {float: left;}
+.floatR {float: right;}
+.clear {clear: both;}
+.clearL {clear: left;}
+.clearR {clear: right;}
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}</code></pre>
+
+<p>Now we're gonna get technical (as though we weren't being technical before).  The one you're most interested in, probably, is the class .center.  If we want to center text, we apply this to the block-level element that contains the text we want to center.  At some point I'll need to explain the box model so ya'll understand how text gets centered (or not), as it often seems completely unpredictable and frustrating.  Well, there's a happy logic to it that's based on whether an element is "inline" or "block", blah blah blah, yadda yadda yadda, and then I found five dollars.</p>
+
+<p>So.  You wanna center this code:</p>
+
+<pre><code>&lt;h2&gt;I Found Five Dollars&lt;/h2&gt;</code></pre>
+
+<p>So you'd assign the "center" class to this code like so:</p>
+
+<pre><code>&lt;h2 class="center"&gt;I Found Five Dollars&lt;/h2&gt;</code></pre>
+
+<p>You could also do this:</p>
+
+<pre><code>&lt;div class="center"&gt;
+&lt;h2&gt;I Found Five Dollars&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+
+<p>You WOULD NOT do this:</p>
+
+<pre><code>&lt;h2 align="center"&gt;I found Five Dollars&lt;/h2&gt;</code></pre>
+
+<p>(as the "align" attribute does not exist... and though it does not exist, all browsers will display it anyway, but it will interact unpredictably with elements on the page that were defined with CSS, and remember what we said about those fist fights?  No fun.)</p>
+
+<p>You WOULD ALSO NOT do this:</p>
+
+<pre><code>&lt;center&gt;
+&lt;h2&gt;I found Five Dollars&lt;/h2&gt;
+&lt;/center&gt;</code></pre>
+
+<p>(as the "center" tag definitely does not exist... deal with it.)</p>
+
+<p>Guess what else you WOULD NOT do?</p>
+
+<pre><code>&lt;div align="center"&gt;
+&lt;h2&gt;I Found Five Dollars&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+
+<p>(because again, "align" does not exist)</p>
+
+<p>So.  The same thing works for class="left", class="right", etc.  All that is required in using this code is that you assign the class to a block-level element (like H1-H6, P, etc.) and not an inline element (like A, STRONG, B, EM, I, etc.).  Badda bing.  If it's not working, remember these dependencies:</p>
+
+<ol>
+<li>Clean is turned off (make sure you're code isn't being converted to class="c1 c2 c3, etc."</li>
+<li>The class styles are being defined for the site in question (the above CSS code should be in the stylesheet that the page references.  If it isn't, I haven't added it...)</li>
+<li>The class is assigned to a block-level element</li>
+</ol>
+
+
+<a name="testingContent"></a>
+<h3>Tools for Testing Content Styles and Formatting</h3>
+<h5>content management, styles, formatting, tools, testing</h5>
+
+A quick word about some absurdly useful formatting tools on <a href="http://12.108.1.166/">.166</a>.
+
+<p>Many of you have started tinkering with the quickstart templates under page designs.  Quickstart - Left Navigation is by far the most popular and attractive of the lot.  The CSS is included in the head of the HTML code, so there's no need to synchronize the Quickstart page design with a Quickstart stylesheet.  Some notes:</p>
+
+<p>The side navigation bar is dynamic, uses the CORE_NAV_ADV_TABS plugin and references the "nav_link_display" display template.</p>
+
+<p>The footer navigation is dynamic, uses the CORE_NAV_FOOTER_TEXT plugin and references the "core_nav_footer_display" display template.</p>
+
+<p>The search function uses the CORE_SEARCH_FORM plugin and references the "search_form" display template.  Like the other display templates, this one is customized from the default installation.</p>
+
+<p>The search results use the CORE_SEARCH_RESULTS plugin and references the "search_results" display template.  Here I have cleaned up the code for the default design, but I haven't put any effort into actually restyling it.  Use with caution.</p>
+
+<p>There's a good template for a basic contact form (name, address, email, comments, etc.) under forms called "basic_contact".  It's a bit rough around the edges, but its semantic structure is such that it makes for a pretty good contact form.  I haven't revisited the actual design in a few months but you know what they say... close enough for jazz.  Check it out at <a href="http://12.108.1.166/basic_contact.html">http://12.108.1.166/basic_contact.html</a> .</p>
+
+<p>Also.  I have a super basic contact form under forms called "super_basic_contact".  As the name implies, it's super basic.  Check it out at <a href="http://12.108.1.166/super_basic_contact.html">http://12.108.1.166/super_basic_contact.html</a> .  Why, both of these contact forms are so good that they populate the hot "completed forms" report under advanced design!</p>
+
+<p>And now... new fun stuff!  Under display templates, check out the TEXT_STYLES plugin.  Throw that daddy down into the body element on your favorite webpage, and it'll tell you everything that's going on stylistically on that site. <a href="http://12.108.1.166/text_styles.html">http://12.108.1.166/text_styles.html</a> .</p>
+
+<p>Need to quicky fill a page up with some content to see if the design breaks?  How images align around it?  Under display templates, try the LOREM_IPSUM plugin.  Shoot that puppy into any body element and save yourself the agony of writing a philosophical treatise or something.  <a href="http://12.108.1.166/lorem_ipsum.html">http://12.108.1.166/lorem_ipsum.html</a></p>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Viewmaster</title>
+    <style type="text/css" media="screen">
+      @-webkit-keyframes pulse {
+       0% {
+         -webkit-transform: scale(1.0) rotate(0deg);
+       }
+       10% {
+         -webkit-transform: scale(1.0) rotate(-90deg);
+       }
+       20% {
+         -webkit-transform: scale(1.0) rotate(-90deg);
+       }
+       30% {
+         -webkit-transform: scale(1.0) rotate(-180deg);
+       }
+       40% {
+         -webkit-transform: scale(1.0) rotate(-180deg);
+       }
+       50% {
+         -webkit-transform: scale(1.0) rotate(-270deg);
+       }
+       60% {
+         -webkit-transform: scale(1.0) rotate(-270deg);
+       }
+       70% {
+         -webkit-transform: scale(1.0) rotate(-360deg);
+       }
+       100% {
+         -webkit-transform: scale(1.0) rotate(-360deg);
+       }
+      }
+
+      .pulsedbox {
+       -webkit-animation-name: pulse;
+       -webkit-animation-duration: 8s;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-timing-function: ease-in-out;
+      }
+      
+      div.pulsedbox {
+		background: transparent url(viewmaster.jpg) 0 0 no-repeat;
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		width: 342px;
+		height: 342px;
+      }
+
+	div.overlay {
+		background: transparent url(overlay.png) 0 0 no-repeat;
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		width: 342px;
+		height: 342px;
+	}
+	
+	div.text {
+		position: absolute;
+		top: 340px;
+		left: 300px;
+		width: 442px;
+		height: 342px;
+		color: #000;
+		font-family: helvetica, arial, sans-serif;
+		font-size: 400%;
+	}
+      
+    </style>
+  </head>
+  <body>
+
+    
+    <div class="pulsedbox">
+    </div>
+    
+	<div class="overlay">
+	</div>
+	
+	<div class="text">
+		Your Selection
+	</div>
+  </body>
+</html>

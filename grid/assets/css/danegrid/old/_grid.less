@@ -1,0 +1,279 @@
+/* -----------------------------------------------------------------------
+
+DaneGrid Framework
+November 7, 2010
+
+----------------------------------------------------------------------- */
+
+@container_width: 940px;
+
+@column_width: 6.382978723404255%;
+
+@gutter_width: 2.127659574468085%;
+
+@span_1: @column_width; /* 60 */
+@span_2: (@column_width * 2) + @gutter_width; /* 140 */
+@span_3: (@column_width * 3) + (@gutter_width * 2); /* 220 */
+@span_4: (@column_width * 4) + (@gutter_width * 3); /* 300 */
+@span_5: (@column_width * 5) + (@gutter_width * 4); /* 380 */
+@span_6: (@column_width * 6) + (@gutter_width * 5); /* 460 */
+@span_7: (@column_width * 7) + (@gutter_width * 6); /* 540 */
+@span_8: (@column_width * 8) + (@gutter_width * 7); /* 620 */
+@span_9: (@column_width * 9) + (@gutter_width * 8); /* 700 */
+@span_10: (@column_width * 10) + (@gutter_width * 9); /* 780 */
+@span_11: (@column_width * 11) + (@gutter_width * 10); /* 860 */
+@span_12: (@column_width * 12) + (@gutter_width * 11); /* 940 */
+
+/* grid.css */
+.container {
+	width: @container_width;
+	margin:0 auto;
+}
+
+.span-1,
+.span-2,
+.span-3, 
+.span-4, 
+.span-5, 
+.span-6, 
+.span-7, 
+.span-8, 
+.span-9, 
+.span-10, 
+.span-11, 
+.span-12 {
+	float: left;
+	margin-right: @gutter_width;
+}
+
+.last {
+	margin-right: 0 !important;
+}
+
+.span-1 { width:@span_1; } /* 60 */
+.span-2 { width:@span_2; } /* 140 */
+.span-3 { width:@span_3; } /* 220 */
+.span-4 { width:@span_4; } /* 300 */
+.span-5 { width:@span_5; } /* 380 */
+.span-6 { width:@span_6; } /* 460 */
+.span-7 { width:@span_7; } /* 540 */
+.span-8 { width:@span_8; } /* 620 */
+.span-9 { width:@span_9; } /* 700 */
+.span-10 { width:@span_10; } /* 780 */
+.span-11 { width:@span_11; } /* 860 */
+.span-12 { width:@span_12; margin-right: 0;} /* 940 */
+
+.span-11 .span-1,
+.span-11 .span-2,
+.span-11 .span-3,
+.span-11 .span-4,
+.span-11 .span-5,
+.span-11 .span-6,
+.span-11 .span-7,
+.span-11 .span-8,
+.span-11 .span-9,
+.span-11 .span-10 {margin-right: (@gutter_width / @span_11) * 100;}
+
+.span-11 .span-1 { width: (@span_1 / @span_11) * 100; }
+.span-11 .span-2 { width: (@span_2 / @span_11) * 100; }
+.span-11 .span-3 { width: (@span_3 / @span_11) * 100; }
+.span-11 .span-4 { width: (@span_4 / @span_11) * 100; }
+.span-11 .span-5 { width: (@span_5 / @span_11) * 100; }
+.span-11 .span-6 { width: (@span_6 / @span_11) * 100; }
+.span-11 .span-7 { width: (@span_7 / @span_11) * 100; }
+.span-11 .span-8 { width: (@span_8 / @span_11) * 100; }
+.span-11 .span-9 { width: (@span_9 / @span_11) * 100; }
+.span-11 .span-10 { width: (@span_10 / @span_11) * 100; }
+
+.span-10 .span-1,
+.span-10 .span-2,
+.span-10 .span-3,
+.span-10 .span-4,
+.span-10 .span-5,
+.span-10 .span-6,
+.span-10 .span-7,
+.span-10 .span-8,
+.span-10 .span-9,
+.span-10 .span-10 {margin-right: (@gutter_width / @span_10) * 100;}
+
+.span-10 .span-1 { width: (@span_1 / @span_10) * 100; }
+.span-10 .span-2 { width: (@span_2 / @span_10) * 100; }
+.span-10 .span-3 { width: (@span_3 / @span_10) * 100; }
+.span-10 .span-4 { width: (@span_4 / @span_10) * 100; }
+.span-10 .span-5 { width: (@span_5 / @span_10) * 100; }
+.span-10 .span-6 { width: (@span_6 / @span_10) * 100; }
+.span-10 .span-7 { width: (@span_7 / @span_10) * 100; }
+.span-10 .span-8 { width: (@span_8 / @span_10) * 100; }
+.span-10 .span-9 { width: (@span_9 / @span_10) * 100; }
+
+.span-9 .span-1,
+.span-9 .span-2,
+.span-9 .span-3,
+.span-9 .span-4,
+.span-9 .span-5,
+.span-9 .span-6,
+.span-9 .span-7,
+.span-9 .span-8 {margin-right: (@gutter_width / @span_9) * 100;}
+
+.span-9 .span-1 { width: (@span_1 / @span_9) * 100; }
+.span-9 .span-2 { width: (@span_2 / @span_9) * 100; }
+.span-9 .span-3 { width: (@span_3 / @span_9) * 100; }
+.span-9 .span-4 { width: (@span_4 / @span_9) * 100; }
+.span-9 .span-5 { width: (@span_5 / @span_9) * 100; }
+.span-9 .span-6 { width: (@span_6 / @span_9) * 100; }
+.span-9 .span-7 { width: (@span_7 / @span_9) * 100; }
+.span-9 .span-8 { width: (@span_8 / @span_9) * 100; }
+
+.span-8 .span-1,
+.span-8 .span-2,
+.span-8 .span-3,
+.span-8 .span-4,
+.span-8 .span-5,
+.span-8 .span-6,
+.span-8 .span-7 {margin-right: (@gutter_width / @span_8) * 100;}
+
+.span-8 .span-1 { width: (@span_1 / @span_8) * 100; }
+.span-8 .span-2 { width: (@span_2 / @span_8) * 100; }
+.span-8 .span-3 { width: (@span_3 / @span_8) * 100; }
+.span-8 .span-4 { width: (@span_4 / @span_8) * 100; }
+.span-8 .span-5 { width: (@span_5 / @span_8) * 100; }
+.span-8 .span-6 { width: (@span_6 / @span_8) * 100; }
+.span-8 .span-7 { width: (@span_7 / @span_8) * 100; }
+
+.span-7 .span-1,
+.span-7 .span-2,
+.span-7 .span-3,
+.span-7 .span-4,
+.span-7 .span-5,
+.span-7 .span-6 {margin-right: (@gutter_width / @span_7) * 100;}
+
+.span-7 .span-1 { width: (@span_1 / @span_7) * 100; }
+.span-7 .span-2 { width: (@span_2 / @span_7) * 100; }
+.span-7 .span-3 { width: (@span_3 / @span_7) * 100; }
+.span-7 .span-4 { width: (@span_4 / @span_7) * 100; }
+.span-7 .span-5 { width: (@span_5 / @span_7) * 100; }
+.span-7 .span-6 { width: (@span_6 / @span_7) * 100; }
+
+.span-6 .span-1,
+.span-6 .span-2,
+.span-6 .span-3,
+.span-6 .span-4,
+.span-6 .span-5 {margin-right: (@gutter_width / @span_6) * 100;}
+
+.span-6 .span-1 { width: (@span_1 / @span_6) * 100; }
+.span-6 .span-2 { width: (@span_2 / @span_6) * 100; }
+.span-6 .span-3 { width: (@span_3 / @span_6) * 100; }
+.span-6 .span-4 { width: (@span_4 / @span_6) * 100; }
+.span-6 .span-5 { width: (@span_5 / @span_6) * 100; }
+
+.span-5 .span-1,
+.span-5 .span-2,
+.span-5 .span-3,
+.span-5 .span-4 {margin-right: (@gutter_width / @span_5) * 100;}
+
+.span-5 .span-1 { width: (@span_1 / @span_5) * 100; }
+.span-5 .span-2 { width: (@span_2 / @span_5) * 100; }
+.span-5 .span-3 { width: (@span_3 / @span_5) * 100; }
+.span-5 .span-4 { width: (@span_4 / @span_5) * 100; }
+
+.span-4 .span-1,
+.span-4 .span-2,
+.span-4 .span-3 {margin-right: (@gutter_width / @span_4) * 100;}
+
+.span-4 .span-1 { width: (@span_1 / @span_4) * 100; }
+.span-4 .span-2 { width: (@span_2 / @span_4) * 100; }
+.span-4 .span-3 { width: (@span_3 / @span_4) * 100; }
+
+.span-3 .span-1,
+.span-3 .span-2 {margin-right: (@gutter_width / @span_3) * 100;}
+
+.span-3 .span-1 { width: (@span_1 / @span_3) * 100; }
+.span-3 .span-2 { width: (@span_2 / @span_3) * 100; }
+
+.span-2 .span-1 {margin-right: (@gutter_width / @span_2) * 100;}
+
+.span-2 .span-1 { width: (@span_1 / @span_2) * 100; }
+
+
+.append-1 { padding-right: (@span_1 + @gutter_width); }
+.append-2 { padding-right: (@span_2 + @gutter_width); }
+.append-3 { padding-right: (@span_3 + @gutter_width); }
+.append-4 { padding-right: (@span_4 + @gutter_width); }
+.append-5 { padding-right: (@span_5 + @gutter_width); }
+.append-6 { padding-right: (@span_6 + @gutter_width); }
+.append-7 { padding-right: (@span_7 + @gutter_width); }
+.append-8 { padding-right: (@span_8 + @gutter_width); }
+.append-9 { padding-right: (@span_9 + @gutter_width); }
+.append-10 { padding-right: (@span_10 + @gutter_width); }
+.append-11 { padding-right: (@span_11 + @gutter_width); }
+
+.prepend-1 { padding-left: (@span_1 + @gutter_width); }
+.prepend-2 { padding-left: (@span_2 + @gutter_width); }
+.prepend-3 { padding-left: (@span_3 + @gutter_width); }
+.prepend-4 { padding-left: (@span_4 + @gutter_width); }
+.prepend-5 { padding-left: (@span_5 + @gutter_width); }
+.prepend-6 { padding-left: (@span_6 + @gutter_width); }
+.prepend-7 { padding-left: (@span_7 + @gutter_width); }
+.prepend-8 { padding-left: (@span_8 + @gutter_width); }
+.prepend-9 { padding-left: (@span_9 + @gutter_width); }
+.prepend-10 { padding-left: (@span_10 + @gutter_width); }
+.prepend-11 { padding-left: (@span_11 + @gutter_width); }
+
+/* still need to create these for all the different nested permutations */
+
+
+
+
+/* 
+input.span-1, textarea.span-1, input.span-2, textarea.span-2, input.span-3, textarea.span-3, input.span-4, textarea.span-4, input.span-5, textarea.span-5, input.span-6, textarea.span-6, input.span-7, textarea.span-7, input.span-8, textarea.span-8, input.span-9, textarea.span-9, input.span-10, textarea.span-10, input.span-11, textarea.span-11, input.span-12, textarea.span-12 {border-left-width:1px;border-right-width:1px;padding-left:5px;padding-right:5px;}
+input.span-1, textarea.span-1 {width:48px;}
+input.span-2, textarea.span-2 {width:128px;}
+input.span-3, textarea.span-3 {width:208px;}
+input.span-4, textarea.span-4 {width:288px;}
+input.span-5, textarea.span-5 {width:368px;}
+input.span-6, textarea.span-6 {width:448px;}
+input.span-7, textarea.span-7 {width:528px;}
+input.span-8, textarea.span-8 {width:608px;}
+input.span-9, textarea.span-9 {width:688px;}
+input.span-10, textarea.span-10 {width:768px;}
+input.span-11, textarea.span-11 {width:848px;}
+input.span-12, textarea.span-12 {width:928px;}
+
+.border {padding-right:9px;margin-right:10px;border-right:1px solid #ddd;}
+.colborder {padding-right:49px;margin-right:50px;border-right:1px solid #ddd;}
+.pull-1 {margin-left:-80px;}
+.pull-2 {margin-left:-160px;}
+.pull-3 {margin-left:-240px;}
+.pull-4 {margin-left:-320px;}
+.pull-5 {margin-left:-400px;}
+.pull-6 {margin-left:-480px;}
+.pull-7 {margin-left:-560px;}
+.pull-8 {margin-left:-640px;}
+.pull-9 {margin-left:-720px;}
+.pull-10 {margin-left:-800px;}
+.pull-11 {margin-left:-880px;}
+.pull-12 {margin-left:-960px;}
+.pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12 {float:left;position:relative;}
+.push-1 {margin:0 -80px 1.5em 80px;}
+.push-2 {margin:0 -160px 1.5em 160px;}
+.push-3 {margin:0 -240px 1.5em 240px;}
+.push-4 {margin:0 -320px 1.5em 320px;}
+.push-5 {margin:0 -400px 1.5em 400px;}
+.push-6 {margin:0 -480px 1.5em 480px;}
+.push-7 {margin:0 -560px 1.5em 560px;}
+.push-8 {margin:0 -640px 1.5em 640px;}
+.push-9 {margin:0 -720px 1.5em 720px;}
+.push-10 {margin:0 -800px 1.5em 800px;}
+.push-11 {margin:0 -880px 1.5em 880px;}
+.push-12 {margin:0 -960px 1.5em 960px;}
+.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12 {float:left;position:relative;}
+
+div.prepend-top, .prepend-top {margin-top:1.5em;}
+div.append-bottom, .append-bottom {margin-bottom:1.5em;}
+.box {padding:1.5em;margin-bottom:1.5em;background:#e5eCf9;}
+hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:1px;margin:0 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;visibility:hidden;} */
+
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}

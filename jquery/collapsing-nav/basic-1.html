@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Brainside Out - "One-At-A-Time" Collapsing Navigation</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="robots" content="all" />
+<meta name="author" content="Dane Petersen, Brainside Out LLC" />
+
+<style type="text/css">
+	ul#collapsing-nav li a {
+		color: #00f;
+		text-decoration: underline;
+	}
+
+	ul#collapsing-nav li a:hover {
+		color: #f00;
+	}
+
+	body.enhanced ul#collapsing-nav span {
+		color: #00f;
+		text-decoration: underline;
+	}
+
+	body.enhanced ul#collapsing-nav span:hover {
+		color: #f00;
+		cursor: pointer;
+	}
+
+	body.enhanced ul#collapsing-nav li.selected span,
+	body.enhanced ul#collapsing-nav li.selected span:hover {
+		color: #000;
+		cursor: default;
+		text-decoration: none;
+	}
+</style>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	function collapsing_nav() {
+		$("body").addClass("enhanced");
+		$("#collapsing-nav > li:first").addClass("selected");
+		$("#collapsing-nav > li").not(":first").find("ul").hide();
+		$("#collapsing-nav > li span").click(function() {
+			if ($(this).parent().find("ul").is(":hidden")) {
+				$("#collapsing-nav ul:visible").slideUp("fast");
+				$("#collapsing-nav > li").removeClass("selected");
+				$(this).parent().addClass("selected");
+				$(this).parent().find("ul").slideDown("fast");
+			}
+		});
+	}
+	$(collapsing_nav);
+</script>
+
+</head>
+
+<body>
+	
+	<h1>"One-At-A-Time" Collapsing Navigation</h1>
+
+	<p>This page demonstrates the basic code necessary to get up and running. <a href="http://labs.brainsideout.com/jquery/collapsing-nav/">Visit the example page</a> to see a more stylized version.</p>
+
+	<p><a href="http://labs.brainsideout.com/jquery/collapsing-nav/collapsing-nav.zip">Download these code examples.</a> (24KB zip file)</p>
+
+	<ul id="collapsing-nav">
+		<li><span>Main Nav One</span>
+			<ul>
+				<li><a href="#">Sub Nav One</a></li>
+				<li><a href="#">Sub Nav Two</a></li>
+				<li><a href="#">Sub Nav Three</a></li>
+			</ul>
+		</li>
+		<li><span>Main Nav Two</span>
+			<ul>
+				<li><a href="#">Sub Nav One</a></li>
+				<li><a href="#">Sub Nav Two</a></li>
+				<li><a href="#">Sub Nav Three</a></li>
+			</ul>
+		</li>
+		<li><span>Main Nav Three</span>
+			<ul>
+				<li><a href="#">Sub Nav One</a></li>
+				<li><a href="#">Sub Nav Two</a></li>
+				<li><a href="#">Sub Nav Three</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-321702-17");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+	
+</body>
+</html>

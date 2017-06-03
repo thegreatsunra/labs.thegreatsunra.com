@@ -1,0 +1,278 @@
+/* -------------------------------------------
+Dane Petersen
+Styles for Recipe Form Challenge
+September, 2009
+------------------------------------------- */
+
+/* ===Reset=== */
+/* ------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+/* ===Global Styles=== */
+/* ------------------------------------------- */
+
+body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 16px;
+	line-height: 1em;
+	color: #333;
+}
+
+h1 {
+	color: #369;
+	font-size: 36px;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+
+h2 {
+	color: #369;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+
+p {
+	padding-bottom: 10px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+dd, dt {
+	float: left;
+}
+
+dt {
+	clear: left;
+	width: 140px;
+	margin-right: 20px;
+	text-align: right;
+	margin-bottom: 10px;
+	padding-top: 8px;
+}
+
+dd {
+	width: 300px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+/* ===Forms=== */
+/* ------------------------------------------- */
+
+fieldset {
+	width: 600px;
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: #f9f9f9;
+	margin-bottom: 10px;
+}
+
+label {
+	font-weight: bold;
+}
+
+select, option {
+	font-size: 16px;
+}
+
+textarea {
+	border: 1px solid #999;
+	font-size: 16px;
+}
+
+input.text {
+	border: 1px solid #999;
+	font-size: 16px;
+	padding: 4px;
+	width: 292px;
+	background: #f6f6f6 url(text-input-bg.png) 0 0 repeat-x;
+}
+
+input.file {
+	font-size: 16px;
+}
+
+/* ===Layout Styles=== */
+/* ------------------------------------------- */
+
+div#content {
+	padding: 50px;
+}
+
+/* ===New Recipe=== */
+/* ------------------------------------------- */
+
+dt.servings, dt.description {
+	padding-top: 0;
+}
+
+textarea.description {
+	width: 292px;
+	padding: 4px;
+	height: 100px;
+	background: #f6f6f6 url(textarea-bg.png) 0 0 repeat-x;
+}
+
+.optional {
+	color: #999;
+	font-size: 12px;
+}
+
+.servings-option {
+	padding-right: 20px;
+	font-weight: bold;
+}
+
+.servings-option input.radio {
+}
+
+div.photo-notice {
+	position: absolute;
+	display: block;
+	width: 200px; /* should add to 222 px */
+	height: 65px; /* should add to 65 px */
+	padding: 6px 4px 4px 18px;
+	font-size: 11px;
+	color: #6f5236;
+	z-index: 1;
+	background: transparent url(notice.png) 0 0 no-repeat;
+	left: 334px;
+	top: 4px;
+	line-height: 1.2;
+}
+
+div.servings-options {
+	position: relative;
+}
+
+div.servings-options div.required-notice {
+	top: -14px;
+}
+
+/* ===Ingredients=== */
+/* ------------------------------------------- */
+
+.ingredients-list label {
+	padding-right: 5px;
+}
+
+.ingredients-list .ingredient-input {
+	float: left;
+	width: 400px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.ingredients-list .ingredient-input input.text {
+	width: 206px;
+}
+
+.amount-input .example {
+	position: absolute;
+	display: block;
+	width: 152px; /* should add to 172 px */
+	height: 35px; /* should add to 45 px */
+	padding: 6px 2px 4px 18px;
+	font-size: 11px;
+	color: #6f5236;
+	z-index: 1;
+	background: transparent url(example.png) 0 0 no-repeat;
+	left: 134px;
+	top: -4px;
+	line-height: 1.2;
+}
+
+.amount-input {
+	float: left;
+	width: 160px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.amount-input input.text {
+	width: 60px;
+}
+
+div.add-ingredient {
+	clear: both;
+}
+
+div.add-ingredient a {
+	color: #333;
+	font-weight: bold;
+}
+
+div.add-ingredient a:hover {
+	color: #494;
+}
+
+/* ===Directions=== */
+/* ------------------------------------------- */
+
+.directions label {
+	padding-right: 5px;
+}
+
+.directions input.text {
+	width: 400px;
+}
+
+.steps-list li {
+	margin-bottom: 10px;
+}
+
+.step-item {
+	position: relative;
+}
+
+div.add-step a {
+	color: #333;
+	font-weight: bold;
+}
+
+div.add-step a:hover {
+	color: #494;
+}
+
+p.add-recipe {
+	padding-top: 20px;
+	text-align: center;
+}
+
+div.required-notice {
+	position: absolute;
+	display: block;
+	width: 152px; /* should add to 172 px */
+	height: 27px; /* should add to 45 px */
+	padding: 14px 2px 4px 18px;
+	font-size: 11px;
+	color: #721717;
+	z-index: 1;
+	background: transparent url(required.png) 0 0 no-repeat;
+	left: 296px;
+	top: -4px;
+	line-height: 1.2;
+}
+
+.step-item div.required-notice {
+	left: 460px;
+}
+
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}

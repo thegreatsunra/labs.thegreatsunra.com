@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Alpine Designer Necronomicon: CSS-Based Flyover Navigation</title>
+	<style type="text/css">@import "styles.css";</style>
+</head>
+
+<body>
+<h1>Alpine CSS-Based Flyover Navigation</h1>
+
+<a name="caseAgainst"></a>
+<h3>Flyover Research: The Case Against Drop Down Menus</h3>
+<h5>flyover navigation, research, usability problems</h5>
+<p>The case against using drop down menus:</p>
+
+<p>http://www.zeldman.com/daily/0604f.shtml#ala184</p>
+
+<a name="proof"></a>
+<h3>CSS Flyover Navigation: A Proof of Concept</h3>
+<h5>flyover navigation, css tips, web standards</h5>
+<p>Ladies and gentlemen, I believe we have it.  We should start calling it something besides "flyover" navigation because I grow weary of that word... I do like "drop down menu" for top-level stuff, and "side menu" for side-level stuff, and I'm sure we can come up with better names than that... like The Bootsy Collins Menuing System or The P-Funk All-Star Navigation or The Zestified Shock and Awe Listing Mechanism or The Mighty Mighty Tighty Whitey UI.</p>
+
+<p>Anyways, this is pretty cool.  It has been tested and works in IE 6.0, Mozilla 1.7, Firefox 1.0 and Opera 7.5.  I'm sure ya'll are wonderin' if this is better than our old flyover navigation, and let me assure you that it most certainly is.  Let me give you 10 hot and spicy reasons why:</p>
+
+<ol><li>It's compatible with our new advanced navigation package (of which, there are working plans for it to gain intelligence and take over the world and enslave all of mankind)</li>
+
+<li>It's super fast and super lightweight, as it runs off a simple unordered HTML list and a snip of CSS code.  Rick's fortune cookie today said that, "World domination does not come easy to he who is fat and loagy."</li>
+
+<li>It works in good browsers browsers (Mozilla, Opera, Firefox) even when JavaScript is turned off.</li>
+
+<li>It uses forward-compatible, standards-compliant code.  And standards isn't a dirty word.</li>
+
+<li>It is easy to customize the navigation's look-and-feel to match sites of all stylistic persuasion.</li>
+
+<li>Because of its striking similarities to our existing navigation package, it should be easy for us to offer The Bootsy Collins Menuing System as an upgrade for existing clients, and as a feasible offering for potential clients.</li>
+
+<li>Yes Virginia, it works in Internet Explorer.</li>
+
+<li>Something.  I forget.</li>
+
+<li>It won't lose your socks in the dryer.</li>
+
+<li>Open source and free.  Free as in beer.</li></ol>
+
+<p>So with that, I'm sure you wanna see it.  Wanna see it?  Sure you wanna see it:</p>
+
+<p><a href="http://12.108.1.166/flyover/quickstart_one/">http://12.108.1.166/flyover/quickstart_one/</a></p>
+
+<p>That's a good start. ...but what if we want two levels of subnavigation?  Done and done, my good man:</p>
+
+<p><a href="http://12.108.1.166/flyover/quickstart_two/">http://12.108.1.166/flyover/quickstart_two/</a></p>
+
+<p>Alright.  That's pretty sweet, but what about gross navigational obscenity?  How about three levels of subnavigation?  Are you (wo)man enough to stand the intensity?  CAN YOU SMELL WHAT THE ROCK'S COOKIN'?</p>
+
+<p><a href="http://12.108.1.166/flyover/quickstart_three/">http://12.108.1.166/flyover/quickstart_three/</a></p>
+
+<p>I could keep goin', but I'm sure ya'll get the point.� Main navigation is accessible but sub navigation doesn't work in IE 5.x for Mac, which is an issue that demands more research.  It looks like it is haveing trouble with a snippet of JavaScript that IE5, IE5.5 and IE6.0 require to enable hover states.</p>
+
+
+<a name="maintaining"></a>
+<h3>Maintaining Code for CSS Flyover Navigation</h3>
+<h5>flyover navigation, javascript, css tips, escape characters, maintenance</h5>
+
+<p>A few notes, if you ever find yourself working with the page designs for OAR (and likely many page designs of sites to come, as these are techniques that are probably here to stay).</p>
+
+<p>1. The flyover navigation depends on a snippet of JavaScript that tricks Internet Explorer into working as a web browser.  Wonderfully, this JS code uses a few escape backslashes \ to get IE (and other browsers) to process correctly.  The desired code is as follows:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;&lt;!--//-->&lt;![CDATA[//&gt;&lt;!--
+sfHover = function() {
+��� var sfEls = document.getElementById("topNav").getElementsByTagName("LI");
+��� for (var i=0; i&lt;sfEls.length; i++) {
+������� sfEls[i].onmouseover=function() {
+����������� this.className+=" sfhover";
+������� }
+������� sfEls[i].onmouseout=function() {
+����������� this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+������� }
+��� }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+//-->&lt;!]]>&lt;/script&gt;</code></pre>
+
+<p>Of particular note is the RegEx command (" sfhover\\b").  We want two backslashes in there, but when we upload data to our system it strips and replaces our backslashes.  If we just upload the code with sfhover\\b, both slashes will be stripped out and replaced with nothing, which will blow up the flyover menus in every browser.</p>
+<p>To get the code to work right, use five backslashes (sfhover\\\\\b).  When our system processes the code, it will leave behind two backslashes.  Every time you edit the page design be sure to add these extra backslashes or else the system will strip them all out. Every time. Got it?  Good.</p>
+
+<p>The other place for potential backslash problems is in the global.css file.  Since IE 5.2/Mac has finicky tastes, I need to exploit its flaws and pass a few custom styles to keep the site from blowing up.  Near the very top of the CSS file I have this declaration:</p>
+
+<pre><code>/*\*//*/
+@import "/ie5mac.css";
+/**/</code></pre>
+
+<p>That's how it's supposed to look.  However, to deal with stripped backslashes you need to make sure you upload/save the file like so:</p>
+
+<pre><code>/*\\*//*/
+@import "/ie5mac.css";
+/**/</code></pre>
+
+<p>One slash will get stripped and the other will remain, and everything will still work in IE 5.2/Mac.  If you don't save the file with two slashes, they will all disappear and bad things will happen.  Make this change, and make this change every time you edit the file.</p>
+
+</body>
+</html>

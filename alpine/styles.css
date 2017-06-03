@@ -1,0 +1,45 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre {
+padding: 5px 20px 8px 30px;
+line-height: 1.4em;
+}
+
+p, pre {
+padding: 4px 20px 7px 20px;
+}
+
+body {
+background: #eee;
+font-family: trebuchet ms, verdana, helvetica, sans-serif;
+font-size: 13px;
+}
+
+a {
+text-decoration: none;
+font-family: trebuchet ms, verdana, helvetica, sans-serif;
+color: #036;
+}
+
+a:hover {
+color: #014;
+text-decoration: underline;
+}
+
+ul, ol {
+padding: 2px 5px 15px 40px;
+}
+
+h3 {
+font-size: 18px;
+}
+
+li h3 {
+padding: 0;
+}
+h5 {
+font-size: 16px;
+}

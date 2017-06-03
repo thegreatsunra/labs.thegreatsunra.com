@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Alpine Designer Necronomicon: Alpine Design Standards</title>
+	<style type="text/css">@import "styles.css";</style>
+</head>
+
+<body>
+<h1>Alpine Design Standards</h1>
+<a name="learningSystem"></a>
+<h3>Learning the Alpine System</h3>
+<h5>CSS basics, HTML basics, Center Stage, plugins</h5>
+<p>Here is some information that will help you better decipher the inner-workings of the Alpine system. </p>
+
+<p>First, you can get a solid, basic understanding of CSS, HTML, PHP and JavaScript at the website <a href="http://www.w3schools.com/">http://www.w3schools.com/</a>.</p>
+
+<p>For some information specific to Alpine's system, check out the Help section in Center Stage, accessible from a link at the bottom of every page.  The information most pertinent to your desires will be in Help under User Center, Advanced Design, Developer Information and Plugins.</p>
+
+<p>Within Center Stage, you will want to become familiar with the Advanced Design section, which lets you add and change page designs, display templates and stylesheets.  These are powerful tools that can potentially blow up your site if you are not confident in the changes you are making.  Any change you make will be immediately reflected in the live site, and if you do not maintain recoverable copies of the things you are changing, you may find yourself in trouble.</p>
+
+<a name="withDesigners"></a>
+<h3>How Alpine Works with Designers</h3>
+<h5>interaction, designers, design implementation, internal standards, web standards, reusability</h5>
+
+<p>We need to discuss how Alpine interacts with designers.  There are tons of gory details I could go into, here, but I'm just gonna discuss a high-level gloss of where we're at right now and what we can expect for the future.  We've been at this long enough that we're slowly establishing a repeatable process, and it doesn't make sense to have the designer toil over something that we're gonna toil over, anyway.</p>
+
+<p>Today's poster boys for Ideal Alpine Design Implementation are <a href="http://www.bevsherrer.com/">Bev Sherrer</a> and <a href="http://www.rocksprings.com/">Rock Springs</a>.  Both designs are based off the Alpine quickstart templates, and thus are remarkably similar.  For Bev Sherrer, the designer provided us with layered Photoshop files depicting the main page, as well as a few examples of sub pages.  I then sliced up the design and built it into a functioning site.</p>
+
+<p>Now, the Rock Springs design was provided to us in HTML Dreamweaver code, and in the past we have typically taken this HTML, pulled out the static content, replaced it with dynamic stuff (navigation, footers, content area, etc.) and launched the site.  While this process works, and can implement a design fairly quickly, it creates a website that is difficult to maintain, inefficiently coded, not optimized for search engines, inconsistent with other Alpine sites, etc.</p>
+
+<p>In the case of Rock Springs, I looked at the HTML pages and completely recoded the design using the Alpine templates.  This was the ultimate test for our templates; whether we could squeeze a provided design into a framework that is accessible, sensible for search engines, coded efficiently, and consistent with other (and future) Alpine sites.</p>
+
+<p>Well gosh darn it, it worked.  It worked beautifully, and when the client dropped by the other day we had a really good discussion about the advantages provided by the new Rock Springs design.  Not only does it look better than their existing site, but there are some incredible things whirring away under the hood as well (like content management, fast load times, customizable navigation, consistent design elements, happy lean and mean code, search engine visibility, etc.).</p>
+
+<p>So this is how we're gonna do it from here on out.  If a designer prefers to use HTML as a design tool, that's totally cool.  There are a few advantages to this approach, as it helps Alpine understand how the designer wants the site to react to the user (navigation, hover states, rotating images, etc.), and proves that the designer has created a site that will function on the web, rather than having drawn a few pretty pictures.  Realize, however, that whatever code the designer creates will be completely rewritten to utilize Alpine's templates.</p>
+
+<p>If a designer is more comfortable creating Photoshop comps, that's swell as well, so long as they understand the design limitations of the web (and our CMS) and haven't provided us with something that flat-out won't work.  Bev Sherrer went together beautifully, and since we had the layered files I was able to create a few new buttons and graphics that the designer had not created.</p>
+
+<p>So that's where we're at for now.</p>
+
+
+<a name="alpineAdvantages"></a>
+<h3>Advantages of the Alpine Design Strategy</h3>
+<h5>web standards, search visibility, browser testing, browser compatibility, accessibility, load speed, semantic design, reusability</h5>
+
+<p>There are a number of advantages with the new Alpine design process, and a few of them are as follows:</p>
+
+<p><strong>Advantages of an Alpine Design</strong></p>
+
+<p>1. Better Search Engine Results - this is achieved through reduced page weight, efficient code and semantic design.</p>
+
+<p>2. Faster Load Times - this is achieved through an efficient use of HTML code, and a heavy reliance on cachable CSS files that allow us to streamline our design code.</p>
+
+<p>3. Accessible Designs - accessible to text browsers, PDA's and cell phones, as well as people with visual/mobile disabilities.  Honestly, I feel more comfortable championing the text/PDA/phone facets of our accessibility, as I am rather unfamiliar with screen readers and other browsing tools used by people with disabilities.  I believe we are far beyond many sites in the realm of disability accessibility, but we're not perfect.</p>
+
+<p>4. Consistency - both in navigation and presentation... Our templating format allows users to grow their site and still maintain a consistent look-and-feel.  If users are being disciplined in using h1 - h6 and p tags for marking up their content (rather than font tags and whatever else), then their content styles will be controlled by the stylesheet and remain consistent on all pages.</p>
+
+<p>5. Rapid Site-Wide Style Changes - By using a single external stylesheet to decide style formats on every page, we are able to quickly make changes to text formatting across the entire site.  As a site grows in sophistication, this lets our users quickly enhance their look-and-feel at the same time.  Who says an H2 needs to be big and black?  Maybe it can be small, light blue and capitalized, with a washed-out picture of clowns and badgers in the background.</p>
+
+<p>6. Customizable Navigation - Folders.  Nested Folders.  Primary and (expanding) Secondary Navigation.  Easy Shuffling.  Our new navigation package gives us lots of control over how links are structured, how they're displayed, etc.</p>
+
+<p>7. Content Authoring - That's hot.</p>
+
+<p>8. Consistency with other Alpine Sites - An internal aid for us when addressing support issues or redesigns.</p>
+
+<p>Anyways.  There's more, lots more, but these are not the purpose of this article.</p>
+
+<p><strong>Compatibility with Netscape Navigator 4.x</strong></p>
+
+<p>With all these features comes trade-offs, one of which is support for Netscape Navigation 4.x.  NN4 is used by less than 1% of the web browsing community, and that number is always going down.  Beyond yokylls like myself who install NN4 (whether for kicks, for nostalgia, or for reproducing the NN4 web browsing environment), no one is actually moving onto the NN4 browsing platform.</p>
+
+<p>Nevertheless, by the sheer laws of probability we are bound to encounter someone who will show her website to dear old Aunt Edna, and will be suddenly dismayed that it doesn't look right on Edna's computer.  Disasterous!  Those conniving Alpine freaks have ruined my website!</p>
+
+<p>To take advantage of the design techniques that Alpine is using, we cannot support NN4.� However, we can make it so that the website is navigable, and the content is available, to NN4 users.  The site won't be pretty, but it won't be broken.  The branding won't be there, but the content and navigation will be.</p>
+
+<p>Check these two examples.  The first shows what the page will look like in any browser, the second shows how it will render in NN4:</p>
+
+<p><a href="http://12.108.1.166/non-nn4.html">http://12.108.1.166/non-nn4.html</a><br />
+<a href="http://12.108.1.166/nn4.html">http://12.108.1.166/nn4.html</a></p>
+
+<p>See?  It ain't so bad.  If a client <em>absolutely must have complete design support</em> for NN4, we lose many of the benefits listed above and will need to double our production and implementation costs, as we'll likely need to design two separate sites.  Honestly, the issue may never come up, but this is something where we want no confusion as to what is sensible, and what is not.</p>
+
+<p>Anyways, let's turn the focus away from what Alpine can't do, what Alpine can't support, and what we can do.  Because really, our abilities are so much hotter than our inabilities.</p>
+
+<p><strong>Alpine Browser Compatibility Testing</strong></p>
+
+<p>Currently, Alpine tests all of its designs for compatibility�in the following browsers. This would be a nice list if we would want to itemize everything that Alpine provides to our clients:</p>
+
+<p>1. Internet Explorer 6.0 for Windows<br />
+2. Mozilla 1.6 for Windows (Mozilla is basically the same web browser as Netscape 6.0 and above)<br />
+3. Opera 7.x for Windows<br />
+4. Firefox 0.8 for Windows (very similar in structure to Mozilla and Netscape)</p>
+
+<p>This is our standard offering.  On larger projects, we will typically runs various pages on the site through Browser Cam, which renders tons of screenshots from numerous browsers under numerous operating systems (this process is excellent to do, but can be very expensive and time-consuming).</p>
+
+<p>As far as accessibility goes, Alpine may want to consider adding these browsers to its testing regimen:</p>
+
+<p>1. Lynx (under Windows, under Unix, or perchance in both)<br />
+2. Netscape Navigator 4.7x for Windows (to make sure the content is available, not to make sure that the design is being rendered... as we've already discussed the problems with that...)</p>
+
+<p>To get more involved, we could test against Windows CE, Palm, cell phones, etc... but that's gonna take time and money.</p>
+
+<p>In the future, we may want to strongly consider increasing our support for other browsers:</p>
+
+<p>1. Internet Explorer 5 for Macintosh<br />
+2. Internet Explorer 5.5 for Windows<br />
+3. Safari for Macintosh<br />
+4. Mozilla for Linux/FreeBSD/whatever<br />
+5. Opera for Linux/FreeBSD/whatever<br />
+6. Konqueror for Linux/FreeBSD/whatever</p>
+
+<p>What we're really lacking, it seems, is testing in the Macintosh environment.  If we can get the platforms for testing, however, I am confident that we can make our designs work.</p>
+
+
+<a name="oneAlpine"></a>
+<h3>One Alpine, One Design</h3>
+<h5>web standards, internal design standards, semantic structure, reusability, accessibility, compatibility, search visibility</h5>
+
+<p>There must be a declaration of intent when we say "One Alpine, One Design." By this we do not mean that we want all our websites to look identical. We do not want to hammer our sites into pre-defined molds, layouts or styles. We will not assume that the same design solution that worked for a realty company will work for a pancake company, for a brewery, or for a bike shop. Different clients have different customers, different websites have different visitors, and we must adjust our mentality accordingly.</p>
+
+<p>However, if you look at the majority of content-driven websites, they all have the same structure. Perhaps they do not possess the same design structure, but they do share strikingly similar semantic structures. Differences (and similarities) in design structure are visible and obvious, while differences in semantics are a bit more slippery. Semantics deal with elements of communication and how they relate to meaning, to structure, to one another.</p>
+
+<p>Take a page of your website, and consider how it would be structured if it were the front page of a newspaper. The name of the page (as well as the name of the website) would likely take the place of the newspaper's masthead. Header information would become the first headline, and your primary navigation would become a list of other sections in the newspaper. Your website's content area would become a series of news articles, with your main points mapped out as headlines and lead paragraphs. Important information would appear above the fold (above the browser's scroll-line), while less-important information (and less-gratuitious news) would be located closer to the bottom.</p>
+
+<p>At its most basic structure, this is all a website is. Nearly every site will have a name, a header, an area for content, links for navigation, and a footer. Thus, the room for adventure, creativity and branding is not in how the site is structured (semantics), but in how those elements are presented (design). Alpine is fortunate enough to have a content management system that lets you quickly and easily maintain these structural elements, whether the need is adding/shuffling links for navigation, editing outdated copy that has grown cold and lifeless, or authoring fresh and invigorating content in new sections.</p>
+
+<p>When we say "One Alpine, One Design," we mean that we understand that people have similar needs when it comes to their presence on the web, and our hottest desire is to offer them a consistent experience; whether they've been with us ten hours or ten years, whether their website has ten pages or ten microsites, or whether they update their site ten times a day or ten times a year. To streamline production and support for our clients, we use powerful semantic layouts that load quickly, author easily and grow efficiently.</p>
+
+<p>There are a number of advantages to using these semantic layouts:</p>
+
+<p>1. Because of their semantic structure (and correct use of markup languages like HTML and design languages like CSS), they are extremely visible to search engines. There is no search engine snake oil at work, here, no canned air, no pixy dust.</p>
+
+<p>2. Our elegant use of code generates a website that navigates easily and loads extremely quickly.</p>
+
+<p>3. As web technologies advance and change with time, our layouts are primed to grow along with them. We are poised to take advantage of current and future standards like XHTML, XML and the DOM.</p>
+
+<p>4. Our sites are accessible through a number of alternative means, including cell phone browsers, PDAs, text-based web browsers and screen readers. People using alternative browsing technology, as well as people with disabilities, will be able to access the content on your website.</p>
+
+<p>5.  Our sites embrace the web standards set forth by the World Wide Web Consortium, and render consistently in all modern browsers.</p>
+
+<p>6.  Since we rely on a layout that is inspired by semantics rather than design, our sites are visually flexible, whether you want to recreate your exisiting site layout, set up a microsite, or implement a cutting-edge redesign.</p>
+
+<p>This last point is key to the "One Alpine, One Design" philosophy. We do not want our websites to look the same, but we do want them to deliver the same great results for our customers. It shouldn't matter if you're giving away recipes, selling high-end bicycles, or attracting casual bowlers. We want our websites to be successful, and we believe that this success will be best achieved through a combination of semantic similarity and design originality; through a delicious blend of critical and creative thinking.</p>
+
+
+<a name="htmlCssStandards"></a>
+<h3>Alpine HTML/CSS Coding Standards</h3>
+<h5>internal coding standards, web standards, CSS tips</h5>
+
+<p>July 30, 2004</p>
+
+<p>It has become evident in the last few months that some of the biggest benefits from using an Alpine-produced design for a website come from our ability to build sites that closely adhere to web standards, and thus are able to reap many of the advantages of these standards. High visibility to search engines, consistency across different browsers, lighter page weight (and quicker load times), and accessibility are just a few features that Alpine is able to offer based on this process.</p>
+
+<p>There will come a point very quickly that we will need to diversify our workload, but in so doing we absolutely cannot risk sacrificing the consistency of Alpine's web design offering. Thus, it behooves us to establish a set of Alpine HTML Coding Standards, so we can be sure that no matter who is designing, building or supporting a site, our customers get consistent results throughout.</p>
+
+<p>All major structural HTML elements on an Alpine website should use the same naming conventions as those on our Quickstart Templates. At any time, you can review the different page designs at <a href="http://12.108.1.166/">http://12.108.1.166/</a> to see how these names should be handled. The new, XHTML Strict templates at /, /frank/ and /phil/ have the most thorough structures to date, detailing how certain elements should be nested, and what to do in case of necessary wrappers in a design. Our primary concern, here, is what to name (and how to name) our class and id attributes for major elements. Different designs will certainly require different levels of customized structure (check out the header area of www.bevsherrer.com for a good example), but the more we can adhere to a set of internal coding standards, the less painful our lives will be.</p>
+
+<p>When coding your CSS, the most important thing you can do is be disciplined in your assigning of ids versus classes, and make certain to always specify an HTML element when defining a new id or class. For example:</p>
+
+<pre><code>#headerWrap {}</code></pre>
+
+<p>Would be wrong. But:</p>
+
+<pre><code>div#headerWrap {}</code></pre>
+
+<p>is just fine. Likewise:</p>
+
+<pre><code>#subTop {}</code></pre>
+<p>Would be wrong. But:</p>
+
+<pre><code>td#subTop {}</code></pre>
+
+<p>is perfect. This keeps us from assigning CSS attributes to elements that they were never intended for, and keeps us from inserting redundant code that can be a nightmare to diagnose in the future. How many times have we seen the following:
+</p>
+���<pre><code>&lt;td class="footertext"&gt;
+��� ��� &lt;div class="footertext"&gt;
+��� ��� ��� &lt;a href="foobar.html" class="footertext"&gt;foobar&gt;&lt;/a&gt;
+��� ��� &lt;/div&gt;
+��� &lt;/td&gt;</code></pre>
+
+<p>That is a mess, it is unnecessary, it squanders the advantages of using CSS for design, and it makes figuring out where an element is inheriting its style unnecessarily complicated.</p>
+<p>Also note that we capitalize the second word (and third, and fourth, etc.) in an element with multiple words. Also, we do not use underscores. Never ever. For example:</p>
+
+<pre><code>img.gallerythumbimage {}
+img.galleryThumbimage {}
+img.GalleryThumbImage {}
+img.gallery_Thumb_Image {}</code></pre>
+
+<p>are all bad class names. However:</p>
+
+<pre><code>img.galleryThumbImage {}</code></pre>
+
+<p>is perfect.</p>
+
+<p>Also, the stylesheet for every Alpine website must contain what I have been referring to as "Common Styles". These styles can be found at the bottom of any current stylesheet, say, the one at <a href="http://12.108.1.166/styles.css">http://12.108.1.166/styles.css</a>. These styles define classes that allow us to float (float is the CSS equivalent of the HTML 'align', which has been deprecated), center, left-align, right-align, and hide elements at will, and in full compliance with the W3C's HTML/CSS specs.</p>
+
+<p>Getting down to the nitty-gritty, now, all Alpine websites must have a DOCTYPE specified, which tells the user's browser how it should render the page. With our current content management infrastructure, the DOCTYPE that makes the most sense for us to use is HTML 4.01 Transitional. The code for this DOCTYPE is as follows:</p>
+
+<pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+
+<p>The DOCTYPE goes at the very top of any page design so that it appears at the top of all HTML pages. Idealistically, it would be wonderful to code our sites in XHTML Transitional (or Strict, as I have been experimenting with, recently), but with the code our whuzziwhig editor currently generates, we're going to give ourselves nothing but heartache if we try to write in XHTML at this stage in the game. Functionally, I have been experiencing minimal problems when using the HTML 4.01 Transitional DOCTYPE, so its use is an aesthetic coding sacrifice I am willing to make for now.</p>
+
+<p>What's important to realize is that we've made a conscious decision to code in HTML 4.01 Transitional, and we must code respectively.</p>
+
+<a name="quickstart"></a>
+<h3>Alpine Quickstart Templates</h3>
+<h5>quickstart templates, web standards, internal standards, design implementation</h5>
+
+<p>All the quickstart templates are created and maintained at <a href="http://12.108.1.166/">http://12.108.1.166/</a>.  Currently we have three different styles (top navigation, left navigation and right navigation) that are all remarkably similar, both in appearance and underlying structure.  The similar structure is intentional.  The appearance is merely a matter of convenience, as these templates are extremely flexible stylistically.  Not as flexible as they could be, certainly, but it's a nice start.</p>
+
+<p>I recently committed a few changes to all three templates.  Earlier I had them all set up as a three-column design, with navigation, content and a column intended for sidebars.  However, the sidebar column was really cutting into the space for the content area, and since very few of our customers actually use sidebars when they first start their site, I felt it best to pull this out of its own column and float it in the content area.</p>
+
+<p>The templates have been fairly stable since March, and as evidenced by Jody's implementation, it seems that they work well enough now that other people are able to install them, too.  Grab the designs from .166 but please don't modify ANYTHING at .166, or I will be forced to pull off your fingers and feed them to a rabid pack of teenage pop stars.  Which might have its own perks, really.</p>
+
+<p>Also, all design images that I need to add/edit by hand (as in, anything outside of the system's meta_images and design_images folders that only the Elite Few can access) are currently being maintained in the /.design folder. ...as an example, the little bitty print graphic would be at <a href="http://12.108.1.166/images/.design/print.gif">http://12.108.1.166/images/.design/print.gif</a> .  Maintaining a /.design/ folder certainly beats throwing all the design files in the root, where they'll get lost in the clutter of whatever other images get uploaded in the future.</p>
+
+<p>All recent sites I've designed (Bev Sherrer, Rock Springs, etc.) use a /.design folder.� If there are design images that aren't located in the /.design folder, or if there's a site that flat-out doesn't have a /.design/ folder, I screwed up.</p>
+
+<p>What does the future hold?  Ideally we'll be creating a few more handsome designs that use the same quickstart template structure, but look nicer.  Also, I've been working on a new flyover navigation package to replace the one we're currently using.  The new guy has a structure that is very similar to our new advanced navigation plugin, which will help eliminate that nasty dichotomy we currently have between REGULAR navigation and FLYOVER navigation.  Cuz really, they're all fruit of the same tree.  The same poisonous tree.  Sitting in the middle of the river Styx on a little island where you're stuck and reaching for the tree and whenever you reach for the fruit the tree pulls away and laughs at you and if only, if only you had a chainsaw for a hand you could improve your situation.</p>
+
+<p>Uhh.  Yeah.  You can check out their staging site at <a href="http://12.108.1.166/flyover/">http://12.108.1.166/flyover/</a> .  New flyovers will be leaner, faster, easier to customize, easier to upgrade to, and easier to maintain as a basic package.  They're also highly visible to search engines.</p>
+
+<a name="quickstartTNG"></a>
+<h3>Next-Generation Quickstart Templates</h3>
+<h5>web standards, internal standards, quickstart philosophy, search visibility, compatibility, accessibility, reusability</h5>
+<p>I've been spending some time developing the next generation of Alpine templates, and while they are still in their infancy, I believe they are grown up enough to be exposed to the harsh light.  Witness, now, the future of Alpine design:</p>
+
+<p><a href="http://12.108.1.166/shadow/">http://12.108.1.166/shadow/</a><br />
+<a href="http://12.108.1.166/green/">http://12.108.1.166/green/</a><br />
+<a href="http://12.108.1.166/round/">http://12.108.1.166/round/</a></p>
+
+<p>Baby looks pretty, certainly, but what's most important are the meaty guts under the skin that make baby strong.  These designs are:</p>
+
+<p>1. 100 Percent Consistent.  The HTML code for *every* one of these designs is exactly the same.  They differ only in their CSS code, which entirely determines how the page should be displayed.  This gives Alpine the ability to deliver (and offer) a consistent web presence for all clients, and can drastically simplify the amount of time required to support multiple sites. With all Alpine sites churning with the same code, if you know how to support one Alpine site, you know how to support them all.  w00t.</p>
+
+<p>2. Future-Proof.  Beyond the use of a disallowed character in the prolog (which is generated by our system and is something I cannot fix), the code for all designs validates as XHTML 1.0 Strict (designs, mind you... the content still needs to accomodate our whuzziwhig editor). The XHTML language is the future for all web-based technologies, with its happy integration with XML and whatnot.</p>
+
+<p>Really, what this means for our customers is that we can provide a site that will continue to work no matter where web browsing technology takes us... whether it's web-ready refrigerators or personal OmniMAX net-Theaters or rotary dial modems that squawk and screech in a new, highly efficient compu-human hybridized language.</p>
+
+<p>3. Sex Appeal.  If Alpine can deliver hot-looking sites that render in XHTML Strict, we will attract the best and brightest web designers, who are super-mega-ultra passionate about this sort of thing.  Indeed, this is really some serious navel-gazing that will make Drew cranky cuz he'll be all like, "Well what does that mean for our clients?"</p>
+
+<p>Well, what does it mean?  I can tell ya what it means.  It means that thanks to our sex appeal, we can work with a stable of smart and talented web designers and offer unmatched excellence to our clients.  Is that enough?</p>
+
+<p>4. Mega Lean.  In these designs, all of the design code can be pulled from one CSS file.  The CSS file is cachable, which means that users don't need to reload the entire design every time they bring up a new page within a site.  This leaves our XHTML code free to work as a markup language, making it super tight, super lean, and super fast.  Lighter pages mean faster load times and happier web users.  Lighter pages means we can cram more clients onto fewer servers.  Lighter pages means we won't need to spin a freakin'
+silo of wrapped T1's out of this building.</p>
+
+<p>5. Uber Visible Search.  In our effort to deliver efficient, accessible, compliant websites, we will continue to make sites that dominate search engines; not because we use hacks to exploit weaknesses in search engines, but because we use streamlined code and format content in the way that it was meant to be formatted.  Alpine delivers 100 percent natural search engine goodness, and these templates are even more hella efficient and visible than the ones we're using now.</p>
+
+<p>What's important to note is that this approach will be the next logical step after the Alpine Quickstart Revolution.  These designs are our dragon teeth, that we will sow in the volcanic soil of Central Oregon, and from which we will grow our massive army of web domination.</p>
+
+<a name="bestPractices"></a>
+<h3>Best Practices for Alpine Design Implementation:
+Examples from www.millqtr.com, www.lancaircertified.com and www.firesidemotel.com</h3>
+<h5>web standards, Alpine best practices, design implementation, semantic design</h5>
+<p>Here is a list of Alpine websites that we feel do an incredible job of taking advantage of our Center Stage software:</p> 
+
+<p><a href="http://www.millqtr.com/">http://www.millqtr.com/</a> - We are very satisfied with how the designer handled primary and secondary navigation on this design. </p>
+
+<p><a href="http://www.firesidemotel.com/">http://www.firesidemotel.com/</a> - A different approach to navigation, but very elegant.  Layout styles for interior page content is rather simple, which makes it easy for the client to maintain and update content. </p>
+
+<p><a href="http://www.lancaircertified.com/">http://www.lancaircertified.com/</a> - The design on this site is incredibly efficient, with three distinctive (though consistent) designs acheived through many reused elements. </p>
+
+<a name="bevsherrerSemantics"></a>
+<h3>Case Study for Standards-Based Design:
+Image Replacement and semantics on www.bevsherrer.com</h3>
+<h5>web standards, image replacement, css tips, search visibility, semantics</h5>
+<p>Here are two screenshots from Bev Sherrer's website.  One represents what users see when they access the site, while the other shows what search engines see.  Can you guess which one is which?</p>
+
+<p>Here is the genius: As you can see (or can't see), almost all the design elements are invisible to search engines, as they are referenced through an external stylesheet.  This keeps the HTML code lean and boosts the amount of text content against markup code. ...the leaner you write your code, the more content you have, the better your search results.</p>
+
+<p>We're also doing an image replacement on the picture of Bev Sherrer.  While users see Bev Sherrer when they load the page, search engines see a Headline One Tag that is hyperlinked back to the Bev Sherrer homepage.  Headline One tags are weighted very heavily in search engines like Google, and if the h1 appears to be relevant when compared against other elements in the page (navigation, content areas, etc.), it will help increase relevant search results.</p>
+
+<p>Here's the kicker: Production-wise, we haven't done anything special for Bev Sherrer's website; these are all features that come for free in the new way that Alpine approaches web design.  Rock Springs is designed the same way, with an image-replaced headline for their logo, and logical (clean) structure for their content.  They are all based off the basic Alpine Design Template as well (with the same structure as our Quickstart Templates), so site maintenance should be a heck of a lot easier in the future.  One Alpine, One Design.</p>
+
+
+<a name="lancairCode"></a>
+<h3>Case Study for Standards-Based Design:
+Browser Compatibility on www.lancaircertified.com</h3>
+<h5>web standards, browser compatibility, css tips, search visibility</h5>
+
+<p>The Lancair website is by far the most complicated website I have worked on.  Thus far it has gone together very smoothy, and because of this I feared that the road would get rocky as soon as I started testing the design in other browsers.  The code holding together the Lancair site signaled Alpine's final departure from the old-school methods of web design.  Their website sports the following: </p>
+
+<ol>
+<li>Completely semantic structure, that shares an HTML/CSS code base with all Alpine sites that I have developed in the last six months.</li>
+
+<li>Total use of CSS for all design elements.  There is not a table to be seen in the Lancair design.</li>
+
+<li>Only two (maybe three) minimal style hacks to fix rendering issues in broken browsers (i.e, IE).</li>
+
+<li>CSS-based flyover navigation, that is super fast and super compliant with web standards.</li>
+
+<li>Brutal code efficiency and search engine visibility.</li>
+</ol>
+
+<p>With all that, I took a deep breath and fired up my Macintosh.� I just got done conducting local compatibility tests on the Lancair website, and here are my results: </p>
+
+<ul>
+<li>Internet Explorer 6.0 for Windows - Everything works perfectly</li>
+<li>Opera 7.45 for Windows - Everything works perfectly</li>
+<li>Mozilla 1.7.2 for Windows - Everything works perfectly</li>
+<li>Firefox 1.0 for Windows - Everything works perfectly</li>
+<li>Opera 7.54 for Mac OSX - Everything works perfectly</li>
+<li>Mozilla 1.7.2 for Mac OSX - Everything works perfectly</li>
+<li>Firefox 1.0 for Mac OSX - Everything works perfectly</li>
+<li>Internet Explorer 5.2 for Mac OSX - Everything works perfectly, except for a very minor whitespace issue on the home page, and the fact that flyover navigation doesn't work (though this is no surprise, and we have discussed this shortcoming before... however, all navigation elements are still accessible through side navigation).</li>
+</ul>
+
+<p>Wow.  It would appear that we finally have our design approach completely dialed in.� I have logged very little time in implementing the Lancair design, and it went incredibly quickly given the complexity of the design and the quality of the code.</p>
+
+
+
+<a name="fontStandards1"></a>
+<h3>Web-Based Font Standards (I)</h3>
+<h5>web design, font availability</h5>
+<p>When choosing what fonts to use on a website, our choices are fairly limited.  We are completely dependent on the fonts that our end users have installed on their machines, so we must take care to use common fonts that are widely installed.</p>
+
+<p>Whenever we select a font, we also declare a backup font and a generic font family to use in case the user doesn't have the primary font installed.  Web fonts are grouped into the families serif, sans-serif and monospace.  We rarely mix these families together when declaring a font, as no matter how our users are browsing a site, we want to make sure they get a consistent experience.</p>
+
+<p>The most commonly used web-safe fonts in each family are as follows:</p>
+
+<p>Sans-Serif:<br />
+Verdana<br />
+Helvetica<br />
+Arial<br />
+Arial Black<br />
+Trebuchet MS<br />
+Lucida Sans Unicode<br />
+Tahoma</p>
+
+<p>Serif:<br />
+Georgia<br />
+Geneva<br />
+Times<br />
+Times New Roman</p>
+
+<p>Monospace:<br />
+Courier<br />
+Courier New<br />
+Lucida Console</p>
+
+<p>When deciding what fonts to use for content on a website, keep the following in mind: Studies show that serif fonts are easier to read in print media, but this is not the case when reading information on a computer screen.  Since monitors are a lower resolution medium than print, the small, subtle serifs in a serif font aren't rendered nearly as effectively, and actually hamper comprehension.  When choosing a font for content on a website, it behooves us to favor our sans-serif choices.</p>
+
+<p>Resources</p>
+<p>Survey of Installed Macintosh Fonts:<br />
+<a href="http://www.codestyle.org/css/font-family/sampler-MacResults.shtml">http://www.codestyle.org/css/font-family/sampler-MacResults.shtml</a></p>
+
+<p>Survey of Installed Windows Fonts:<br />
+<a href="http://www.codestyle.org/css/font-family/sampler-WindowsResults.shtml">http://www.codestyle.org/css/font-family/sampler-WindowsResults.shtml</a></p>
+
+<p>Combined Survey of All Platforms (Windows, Mac, Unix):<br />
+<a href="http://www.codestyle.org/css/font-family/sampler-CombinedResults.shtml">http://www.codestyle.org/css/font-family/sampler-CombinedResults.shtml</a></p>
+
+
+<a name="fontStandards2"></a>
+<h3>Web-Based Font Standards (II)</h3>
+<h5>web design, font availability</h5>
+<p>We go through this conversation with all our designers, so I will provide you with the following:</p>
+
+<p>Font Availability Statistics for Windows systems:<br />
+<a href="http://www.codestyle.org/css/font-family/sampler-WindowsResults.shtml">http://www.codestyle.org/css/font-family/sampler-WindowsResults.shtml</a></p>
+
+<p>Font Availability Statistics for Mac systems:<br />
+<a href="http://www.codestyle.org/css/font-family/sampler-MacResults.shtml">http://www.codestyle.org/css/font-family/sampler-MacResults.shtml</a></p>
+
+<p>Typically anything above 80 percent is fair game, but the problem is that the majority of these fonts are hideous.  I mean, Comic Sans?  Impact?  You've got to be kidding.</p>
+
+<p>We always specify multiple fonts so the browser can fall back on something if it doesn't have the first choice installed.  Sans-serif fonts are easier than serif fonts to read on-screen, due to the reduced resolution of screen versus paper mediums.</p>
+
+<p>"Verdana, Helvetica, Arial, sans-serif" is a nice sequence that both PCs and Macs enjoy.<br />
+My favorite font is "Trebuchet MS".<br />
+"Lucida Sans Unicode" is a nice font, but "Lucida Console" is awkward.<br />
+"Arial" is so totally overdone.</p>
+
+<p>You can also shoot for serif fonts, which are nice and classy for headlines but difficult to read for actual content:</p>
+
+<p>"Georgia, Geneva, Times New Roman, serif" is a good serif sequence.<br />
+"Georgia" is my favorite serif font.<br />
+"Times" is really nice, too, but it's only available on the Mac platform.  Everything in the freakin' world is written in "Times New Roman" and I'm totally sick of that font.</p>
+
+<p>SUMMARY:</p>
+
+<p>For sans-serif fonts, we can typically work with Verdana, Arial, Helvetica, Trebuchet MS, Lucida Sans Unicode, and the default "sans-serif" fallback.  For serif, we can typically work with Georgia, Geneva, Times, Times New Roman and the default "serif" fallback.</p>
+
+
+<a name="imageStandards"></a>
+<h3>Image Generation Standards for Center Stage</h3>
+<h5>images, content management, Center Stage</h5>
+<p>The following image sizes are automatically generated by our system.  Whenever an author chooses to place an image in a page, he or she is given the following four options for the image size:</p>
+
+<p>Original - the original uploaded image with no resizing<br />
+Standard - 400 by 400 pixels max<br />
+Thumbnail - 120 by 120 pixels max<br />
+Icon - 64 by 64 pixels max</p>
+
+<p>The system preserves the aspect ratio of the original image.  For example, consider a 2.0 megapixel digital camera photo taken at 1600 x 1200 pixels.  Once uploaded to the system, the original image size will still be 1600 x 1200.  The standard image size will be 400 x 300 (1600:1200 = 4:3 = 400:300), as the longest side will be shrunk down to 400 pixels.  Likewise, the thumbnail will become 120 x 90, and the icon will be 64 x 48.</p>
+
+<p>A few more things regarding image processing:</p>
+
+<p>The original uploaded image retains the original file type.  It is not converted to either a .jpg or .gif.  If the original image is a .bmp, the original image stays a .bmp and all the other sizes are generated in a web-ready format, either .jpg or .gif.</p>
+
+<p>The generated images become a jpg or gif according to the simple rule: "total color count < 256".  For images with a color count of greater than 256, the conversion is made to a jpg.  For less, the conversion is to a gif.  jpg conversion is always made with a quality/compression setting of 75%.</p>
+
+<p>Also, if the original image already fits within one or more of the preset sizes, the original image is copied intact -- no conversion or resizing at all.  This way, you may upload images that are pre-optimized to accomplish your specific goal (smaller than 8k, pre-compressed, etc).</p>
+
+<a name="cmsFormattingCode"></a>
+<h3>Proper Content Management Formatting Code</h3>
+
+<h5>content management, styles, formatting, CSS tips</h5>
+<p>We field calls each week from authors trying to center text.  There are ways for us, internally, to control how text is formatted.  If clients are HTML-savvy we can communicate this to them as well, but mostly this is intended for our own personal use... whether it be for site implementation, content migration, etc.</p>
+
+<p>The problem is this: the whuzziwhig editor writes non-compliant HTML code.  This is a problem with the ActiveX editor tool in Internet Explorer, and is something that we have no control over.  This non-compliant code typically gets into fist-fights with our CSS code (which is the standardized language for web design), and these fights make trying to apply consistent styles unpredictable.  What I've been doing is establishing work-arounds that preserve the same formatting functionality of dirty code, while using predictable CSS code.</p>
+
+<p>To help remedy the chaos, we've been using a program called HTML Tidy, which goes through the HTML code generated by the whuzziwhig editor and makes it clean and happy.  Unfortunately, on a new installation Tidy defaults to a setting called CLEAN, which is like trying to wash the dog with a pressure washer.</p>
+
+<p>When working on a site (at least recently), I've typically used the the local.inc to turn off CLEAN, but leave SWEEP on.  Sweep is a much gentler setting than Clean, but I don't know yet whether it's like washing the dog with a palm sander or with a tooth brush.  I'm still looking at Tidy, figuring out what settings we are using, what settings we want, and what settings we can actually use.  We may need something stronger, we may need something weaker, but it looks like things are functioning with Clean off and Sweep on.  I think.</p>
+
+<p>So.  Clean would go through and take ANY style applied to an element (whether it be align="center" or bgcolor="red" or style="text-align: center" or class="itchy") and replace it with class="c1".  This setting is absolutely worthless, means nothing, and is the reason we can't center text.  What's happening is the actual code for centering the text is stripped out and replaced by... well... nothing meaningful.</p>
+
+<p>With Clean off and Sweep on, we can apply styles at will, though�it behooves us to apply CSS styles to avoid unnecessary fist-fights.  On most recent sites I've defined some basic CSS styles for text formatting. They look like dis:</p>
+
+<pre><code>.hide {display: none;}
+.cloak {visibility: hidden;}
+.floatL {float: left;}
+.floatR {float: right;}
+.clear {clear: both;}
+.clearL {clear: left;}
+.clearR {clear: right;}
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}</code></pre>
+
+<p>Now we're gonna get technical (as though we weren't being technical before).  The one you're most interested in, probably, is the class .center.  If we want to center text, we apply this to the block-level element that contains the text we want to center.  At some point I'll need to explain the box model so ya'll understand how text gets centered (or not), as it often seems completely unpredictable and frustrating.  Well, there's a happy logic to it that's based on whether an element is "inline" or "block", blah blah blah, yadda yadda yadda, and then I found five dollars.</p>
+
+<p>So.  You wanna center this code:</p>
+
+<pre><code>&lt;h2&gt;I Found Five Dollars&lt;/h2&gt;</code></pre>
+
+<p>So you'd assign the "center" class to this code like so:</p>
+
+<pre><code>&lt;h2 class="center"&gt;I Found Five Dollars&lt;/h2&gt;</code></pre>
+
+<p>You could also do this:</p>
+
+<pre><code>&lt;div class="center"&gt;
+&lt;h2&gt;I Found Five Dollars&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+
+<p>You WOULD NOT do this:</p>
+
+<pre><code>&lt;h2 align="center"&gt;I found Five Dollars&lt;/h2&gt;</code></pre>
+
+<p>(as the "align" attribute does not exist... and though it does not exist, all browsers will display it anyway, but it will interact unpredictably with elements on the page that were defined with CSS, and remember what we said about those fist fights?  No fun.)</p>
+
+<p>You WOULD ALSO NOT do this:</p>
+
+<pre><code>&lt;center&gt;
+&lt;h2&gt;I found Five Dollars&lt;/h2&gt;
+&lt;/center&gt;</code></pre>
+
+<p>(as the "center" tag definitely does not exist... deal with it.)</p>
+
+<p>Guess what else you WOULD NOT do?</p>
+
+<pre><code>&lt;div align="center"&gt;
+&lt;h2&gt;I Found Five Dollars&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+
+<p>(because again, "align" does not exist)</p>
+
+<p>So.  The same thing works for class="left", class="right", etc.  All that is required in using this code is that you assign the class to a block-level element (like H1-H6, P, etc.) and not an inline element (like A, STRONG, B, EM, I, etc.).  Badda bing.  If it's not working, remember these dependencies:</p>
+
+<ol>
+<li>Clean is turned off (make sure you're code isn't being converted to class="c1 c2 c3, etc."</li>
+<li>The class styles are being defined for the site in question (the above CSS code should be in the stylesheet that the page references.  If it isn't, I haven't added it...)</li>
+<li>The class is assigned to a block-level element</li>
+</ol>
+
+
+<a name="bevsherrerFIR"></a>
+<h3>CSS Image Replacement on www.bevsherrer.com</h3>
+<h5>web standards, design, css tips, accessibility, search visibility</h5>
+<p>Here's the way I took the hyperlinked <code>&lt;h1&gt;</code> text "Bev Sherrer" and replaced it with an image of Bev Sherrer's head.  There are a number of different ways to do this, but to avoid information overload I'll just give ya one tactic... and links to other tactics...</p>
+
+<p>The HTML is as follows (the proper nesting of elements is important):</p>
+
+<pre><code>&lt;div id="head"&gt;
+�� &lt;h1&gt;
+���� &lt;a href="/" title="Beverly Sherrer Home"&gt;&lt;span&gt;Beverly Sherrer&lt;/span&gt;&lt;/a&gt;
+�� &lt;/h1&gt;
+&lt;/div&gt;</pre></code>
+
+<p>The CSS is as follows:</p>
+
+<pre><code>div#head a {
+display: block;
+background: transparent url(bev_01.gif) top left no-repeat;
+height: 150px;
+width: 127px;
+}
+
+div#head a span {display: none;}</pre></code>
+
+<p>That's it.  A bit of expanation:</p>
+
+<p>1. Technically, the h1 tag is not necessary as I am not applying any style to it.  I'm using it, however, for search engine weight and ranking, as well as the semantically meaningful headline for the page.</p>
+
+<p>2. Applying "display: block;" to the &lt;a&gt; element lets you assign height and width to the hyperlink (so the entire image appears clickable).</p>
+
+<p>Think of an &lt;h1&gt; tag, &lt;p&gt; tag, or any other tag that inserts a carriage return at the end of itself as a block-level element.  Think of &lt;a&gt; tags, &lt;strong&gt; tags, &lt;em&gt; tags or any other tag that occurs in the normal flow of text as an inline element.  Here we're telling the browser to treat this particular &lt;a&gt; element as a block element (instead of an inline element), so we can control its height and width.</p>
+
+<p>3. I nested &lt;span&gt; tags inside the &lt;a&gt; element, as this allows me to control the visibility of whatever text is inside the &lt;a&gt;.  If I tried to hide the &lt;a&gt; element, the link itself would disappear (and not be clickable).</p>
+
+<p>4. I set "display: none;" to the &lt;span&gt; inside the &lt;a&gt;, as "visibility: hidden" caused ugly hyperlink borders to appear in Gecko-based browsers (Mozilla, Firebird, etc.).� "display: none;" is just one tactic for hiding text... there are other ways to do it�(negative margins, 0px heights, etc.) using other techniques... I'm still learning about the best technique to use and the best way to handle this.</p>
+
+<p>That should be it.  A few handy resources regarding image replacement:</p>
+
+<ul>
+<li><a href="http://www.kryogenix.org/code/browser/lir/">http://www.kryogenix.org/code/browser/lir/</a></li>
+<li><a href="http://www.digital-web.com/features/feature_2003-08.shtml">http://www.digital-web.com/features/feature_2003-08.shtml</a></li>
+<li><a href="http://www.mezzoblue.com/tests/revised-image-replacement/">http://www.mezzoblue.com/tests/revised-image-replacement/</a></li>
+<li><a href="http://www.alistapart.com/articles/fir/">http://www.alistapart.com/articles/fir/</a></li>
+</ul>
+
+
+<a name="ie5macFilter"></a>
+<h3>Directing CSS code exclusively to IE5 Mac</h3>
+<h5>web standards, browser compatibility, css tips, css filters, escape characters</h5>
+
+<p>I just resolved a problem with vertical centering on a website.  My approach worked fine in all tested browsers but IE5.2/Mac.  To get it to work I had to pass a few alternative lines of CSS code to IE5.2/Mac, which requires using a CSS filter.  In the global.css file I wrote the following: </p>
+
+<pre><code>/*\*//*/ 
+ @import "/ie5mac.css"; 
+/**/</code></pre>
+
+<p>All browsers except IE5.2/Mac will assume this code is commented out and will skip over it (thus, not loading the ie5mac.css file).  However, here we are exploiting a parsing bug in IE5.2/Mac that allows us to pass the ie5mac.css file to IE5.2/Mac, and only IE5.2/Mac. </p>
+
+<p>Note the single escape character.  If we were to upload this code as-is to our system, it would strip out that escape character.  Thus, whenever we edit global.css, we need to change the code to the following:</p>
+
+<pre><code>/*\\*//*/ 
+�@import "/ie5mac.css"; 
+/**/</code></pre>
+
+<p>Note that we're escaping the escape, here.  Our system will strip one escape and leave the other, producing the desired output of a single escape character. </p>
+</body>
+</html>

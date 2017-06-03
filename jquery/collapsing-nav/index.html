@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Brainside Out - "One-At-A-Time" Collapsing Navigation</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="robots" content="all" />
+<meta name="Copyright" content="Dane Petersen, Brainside Out LLC" />
+<meta name="author" content="Dane Petersen, Brainside Out LLC" />
+<meta name="keywords" content="collapsing menus navigation accordion list css xhtml html javascript jquery dom standards semantic" />
+<meta name="description" content="" />
+
+<style type="text/css" media="screen">
+	@import "stylesheets/global.css";
+	@import "stylesheets/typography.css";
+	@import "stylesheets/collapsing-nav-1.css";
+</style>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	function collapsing_nav() {
+		$("body").addClass("enhanced");
+		$("#collapsing-nav > li:first").addClass("selected");
+		$("#collapsing-nav > li").not(":first").find("ul").hide();
+		$("#collapsing-nav > li span").click(function() {
+			if ($(this).parent().find("ul").is(":hidden")) {
+				$("#collapsing-nav ul:visible").slideUp("fast");
+				$("#collapsing-nav > li").removeClass("selected");
+				$(this).parent().addClass("selected");
+				$(this).parent().find("ul").slideDown("fast");
+			}
+		});
+	}
+	$(collapsing_nav);
+</script>
+	
+</head>
+<body>
+<!--begin whopper-->
+<div id="whopper">
+  <div id="header">
+
+    <div id="h2">
+      <h1><a href="http://brainsideout.com/">"One-At-A-Time" Collapsing Navigation</a></h1>
+	</div><!--end h2-->
+  </div><!--end header-->
+  <div id="main">
+  	<div id="colOne">
+
+      <div id="nav">
+			<ul id="collapsing-nav">
+			    <li><span>Mountains</span>
+			      <ul>
+			        <li><a href="#">Neversummer</a></li>
+			        <li><a href="#">Absaroka</a></li>
+			        <li><a href="#">Wind River</a></li>
+			        <li><a href="#">Bitterroot</a></li>
+			        <li><a href="#">Beartooth</a></li>
+			        <li><a href="#">Gallatin</a></li>
+			      </ul>
+			    </li>
+			    <li><span>Rivers</span>
+			      <ul>
+			        <li><a href="#">Metolius</a></li>
+			        <li><a href="#">Merced</a></li>
+			        <li><a href="#">Deschutes</a></li>
+			        <li><a href="#">White Salmon</a></li>
+			      </ul>
+			    </li>
+			    <li><span>Lakes</span>
+			      <ul>
+			        <li><a href="#">Sawbill</a></li>
+			        <li><a href="#">Gunflint</a></li>
+			        <li><a href="#">Saganaga</a></li>
+			        <li><a href="#">Duncan</a></li>
+			        <li><a href="#">Nipigon</a></li>
+			        <li><a href="#">Gijikiki</a></li>
+			        <li><a href="#">Ottertrack</a></li>
+			        <li><a href="#">Ogishkemuncie</a></li>
+			      </ul>
+			    </li>
+			    <li><span>Trails</span>
+			      <ul>
+			        <li><a href="#">Superior</a></li>
+			        <li><a href="#">Pacific Crest</a></li>
+			        <li><a href="#">Appalachian</a></li>
+			      </ul>
+			    </li>
+			  </ul>
+      </div>
+
+    </div><!--end colOne-->
+    <div id="colTwo">
+      <div id="content">
+	    <div id="c2">
+	      <div id="c3">	  
+		  
+<h2>"One-At-A-Time" Collapsing Navigation</h2>
+
+<p>Also available in a <a href="index-2.html">many-at-a-time configuration.</a></p>
+
+<p>This page demonstrates the collapsing navigation in a stylized manner. Want to see it in the raw? <a href="basic-1.html">Check out the basic code demonstration.</a></p>
+ 
+<p>Insert this javascript in the head of your HTML page. Also, <a href="http://jquery.com/">grab a copy of jQuery</a> and make sure this code is pointing to that file as well.</p>
+
+<pre><code>&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+function collapsing_nav() {
+	$("body").addClass("enhanced");
+	$("#collapsing-nav &gt; li:first").addClass("selected");
+	$("#collapsing-nav &gt; li").not(":first").find("ul").hide();
+	$("#collapsing-nav &gt; li span").click(function() {
+		if ($(this).parent().find("ul").is(":hidden")) {
+			$("#collapsing-nav ul:visible").slideUp("fast");
+			$("#collapsing-nav &gt; li").removeClass("selected");
+			$(this).parent().addClass("selected");
+			$(this).parent().find("ul").slideDown("fast");
+		}
+	});
+}
+$(collapsing_nav);
+&lt;/script&gt;</code></pre>
+
+<p>Use this HTML code, or something similar.</p>
+	
+<pre><code>&lt;ul id="collapsing-nav"&gt;
+	&lt;li&gt;&lt;span&gt;Main Nav One&lt;/span&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav One&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav Two&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav Three&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;Main Nav Two&lt;/span&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav One&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav Two&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav Three&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;Main Nav Three&lt;/span&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav One&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav Two&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Sub Nav Three&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<p>Finally, these are the raw CSS styles that you'll need to complete the effect. Customize these however you see fit. This page is just one example of what you can do.</p>
+
+<pre><code>&lt;style type="text/css"&gt;
+	ul#collapsing-nav li a {
+		color: #00f;
+		text-decoration: underline;
+	}
+
+	ul#collapsing-nav li a:hover {
+		color: #f00;
+	}
+
+	body.enhanced ul#collapsing-nav span {
+		color: #00f;
+		text-decoration: underline;
+	}
+
+	body.enhanced ul#collapsing-nav span:hover {
+		color: #f00;
+		cursor: pointer;
+	}
+
+	body.enhanced ul#collapsing-nav li.selected span,
+	body.enhanced ul#collapsing-nav li.selected span:hover {
+		color: #000;
+		cursor: default;
+		text-decoration: none;
+	}
+&lt;/style&gt;</code></pre>
+
+<p><a href="http://labs.brainsideout.com/jquery/collapsing-nav/collapsing-nav.zip">Download these code examples.</a> (24KB zip file)</p>
+		  </div>
+	    </div>
+      </div><!--end content-->
+
+  	</div><!--end colTwo-->
+
+  </div><!--end main-->
+  <!--begin footer-->
+  <div id="footer">
+    <div id="f2">
+      <div id="footerNav">
+	  	<a href="http://brainsideout.com/" title="all contents copyright &copy; 2009 Dane Petersen">all contents copyright &copy; 2009 Dane Petersen</a>
+	  </div><!--end footerNav-->
+    </div>
+
+  </div>
+</div><!--end whopper-->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-321702-17");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

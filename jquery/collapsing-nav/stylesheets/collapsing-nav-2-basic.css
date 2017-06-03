@@ -1,0 +1,21 @@
+/* "Many-At-A-Time" Collapsing Navigation Styles */
+/* -------------------------------- */
+
+ul#collapsing-nav li a {
+	color: #00f;
+	text-decoration: underline;
+}
+
+ul#collapsing-nav li a:hover {
+	color: #f00;
+}
+
+body.enhanced ul#collapsing-nav span {
+	color: #00f;
+	text-decoration: underline;
+}
+
+body.enhanced ul#collapsing-nav span:hover {
+	color: #f00;
+	cursor: pointer;
+}

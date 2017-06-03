@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Brainside Out - "One-At-A-Time" Collapsing Navigation</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="robots" content="all" />
+<meta name="Copyright" content="Dane Petersen, Brainside Out LLC" />
+<meta name="author" content="Dane Petersen, Brainside Out LLC" />
+<meta name="keywords" content="collapsing menus navigation accordion list css xhtml html javascript jquery dom standards semantic" />
+<meta name="description" content="" />
+
+<style type="text/css" media="screen">
+	@import "stylesheets/global.css";
+	@import "stylesheets/typography.css";
+	@import "stylesheets/collapsing-nav-1.css";
+</style>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	function collapsing_nav() {
+	  // grab the class assigned to the "body" element, if any
+	  var bodyClass = $("body").attr('class');
+	  
+	  // add the "enhanced" class to the body, because clearly the browser has javascript enabled
+		$("body").addClass("enhanced");
+		
+		// if there is a body class, and it corresponds to a class of one of the li elements in the collapsing navigation, do this
+		if ((bodyClass) && ($("#collapsing-nav > li." + bodyClass).length)) {
+		  
+		  // if the body element had multiple classes, only consider the last class assigned to it
+		  bodyClass = bodyClass.split(' ').slice(-1);
+		  
+		  // hide all the nested uls that are not under the li associated with the body class
+		  $("#collapsing-nav > li:not(." + bodyClass +  ")").find("ul").hide();
+		  
+		  // make the li associated with the body class appear selected
+		  $("#collapsing-nav > li." + bodyClass).addClass("selected");
+    }
+    
+    // if there isn't a body class, or if the body class doesn't correspond to any lis in the collapsing navigation, do this
+    else {
+      
+      // hide all the uls that aren't nested under the first li in the collapsing navigation
+		  $("#collapsing-nav > li").not(":first").find("ul").hide();
+		  
+		  // make the first li in the collapsing navigation appear selected
+		  $("#collapsing-nav > li:first").addClass("selected");
+		}
+    
+    // when someone clicks on a section, do this
+		$("#collapsing-nav > li span").click(function() {
+		  
+		  // if neighboring ul sections are hidden, do this
+			if ($(this).parent().find("ul").is(":hidden")) {
+			  
+			  // hide the currently visible ul section
+				$("#collapsing-nav ul:visible").slideUp("fast");
+				
+				// remove the selected class from the previously selected li
+				$("#collapsing-nav > li").removeClass("selected");
+				
+				// make the clicked li appear selected
+				$(this).parent().addClass("selected");
+				
+				// reveal the selected ul
+				$(this).parent().find("ul").slideDown("fast");
+			}
+		});
+	}
+	$(collapsing_nav);
+</script>
+	
+</head>
+<body class="section-3">
+<!--begin whopper-->
+<div id="whopper">
+  <div id="header">
+
+    <div id="h2">
+      <h1><a href="http://brainsideout.com/">"One-At-A-Time" Collapsing Navigation "Smart" Edition</a></h1>
+	</div><!--end h2-->
+  </div><!--end header-->
+  <div id="main">
+  	<div id="colOne">
+
+      <div id="nav">
+			<ul id="collapsing-nav">
+			    <li class="section-1"><span>Mountains</span>
+			      <ul>
+			        <li><a href="#">Neversummer</a></li>
+			        <li><a href="#">Absaroka</a></li>
+			        <li><a href="#">Wind River</a></li>
+			        <li><a href="#">Bitterroot</a></li>
+			        <li><a href="#">Beartooth</a></li>
+			        <li><a href="#">Gallatin</a></li>
+			      </ul>
+			    </li>
+			    <li class="section-2"><span>Rivers</span>
+			      <ul>
+			        <li><a href="#">Metolius</a></li>
+			        <li><a href="#">Merced</a></li>
+			        <li><a href="#">Deschutes</a></li>
+			        <li><a href="#">White Salmon</a></li>
+			      </ul>
+			    </li>
+			    <li class="section-3"><span>Lakes</span>
+			      <ul>
+			        <li><a href="#">Sawbill</a></li>
+			        <li><a href="#">Gunflint</a></li>
+			        <li><a href="#">Saganaga</a></li>
+			        <li><a href="#">Duncan</a></li>
+			        <li><a href="#">Nipigon</a></li>
+			        <li><a href="#">Gijikiki</a></li>
+			        <li><a href="#">Ottertrack</a></li>
+			        <li><a href="#">Ogishkemuncie</a></li>
+			      </ul>
+			    </li>
+			    <li class="section-4"><span>Trails</span>
+			      <ul>
+			        <li><a href="#">Superior</a></li>
+			        <li><a href="#">Pacific Crest</a></li>
+			        <li><a href="#">Appalachian</a></li>
+			      </ul>
+			    </li>
+			  </ul>
+      </div>
+
+    </div><!--end colOne-->
+    <div id="colTwo">
+      <div id="content">
+	    <div id="c2">
+	      <div id="c3">	  
+		  
+<h2>"One-At-A-Time" Collapsing Navigation</h2>
+
+<p>Also available in a <a href="index-2.html">many-at-a-time configuration.</a></p>
+
+<p>This page demonstrates the collapsing navigation in a stylized manner. Want to see it in the raw? <a href="basic-1-smart.html">Check out the basic code demonstration.</a></p>
+		  </div>
+	    </div>
+      </div><!--end content-->
+
+  	</div><!--end colTwo-->
+
+  </div><!--end main-->
+  <!--begin footer-->
+  <div id="footer">
+    <div id="f2">
+      <div id="footerNav">
+	  	<a href="http://brainsideout.com/" title="all contents copyright &copy; 2009 Dane Petersen">all contents copyright &copy; 2009 Dane Petersen</a>
+	  </div><!--end footerNav-->
+    </div>
+
+  </div>
+</div><!--end whopper-->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-321702-17");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

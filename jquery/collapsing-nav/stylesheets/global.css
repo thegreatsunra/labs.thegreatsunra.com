@@ -1,0 +1,147 @@
+/* Global Styles */
+/* -------------------------------- */
+
+* { 
+	margin: 0;
+	padding: 0;
+} 
+
+body {
+	background: #676147 url(../images/body-bg.gif) fixed repeat;
+	text-align: center;
+	font-family: "trebuchet MS", verdana, helvetica, arial, sans-serif;
+}
+
+/* Semantic Content Styles */
+/* -------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5em;
+}
+
+h1 {font-size: 24px;}
+h2 {font-size: 20px;}
+h3 {font-size: 16px;}
+h4 {font-size: 12px;}
+h5 {font-size: 11px;}
+h6 {font-size: 9px;}
+
+p {font-size: 12px;}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+img {border: 0;}
+a img {border: 0;}
+
+code {font-family: "courier new", courier, monospace;}
+
+/* Hyperlink Styles */
+/* -------------------------------- */
+
+a {color: #6D778B;}
+
+/* Form Styles */
+/* -------------------------------- */
+
+input {
+	background-color: #D8D7D5;
+	color: #4D473A;
+}
+input.radio, input.checkbox {border: 0; background: transparent;}
+input.image {border: 0;}
+textarea {
+	background-color: #D8D7D5;
+	color: #4D473A;
+}
+
+/* Layout Styles */
+/* -------------------------------- */
+
+div#whopper {
+	text-align: left;
+	width: 700px;
+	border: 1px solid #342F27;
+	border-width: 0 1px 1px 1px;
+	background: #BEB29D url(../images/whopper-bg.gif) top left repeat-y;
+	margin: 0 auto 0 auto;
+}
+
+div#header {
+	display: block;
+	background: #806E53 url(../images/header-bg.jpg) top left no-repeat;
+	height: 100px;
+}
+
+div#header h1 a {
+	text-indent: -9999px;
+	text-decoration: none;
+	display: block;
+	height: 100px;
+	width: 700px;
+	background: transparent url(../images/header-bg.jpg) top left no-repeat;
+}
+
+div#header h1 a:hover {
+	background-position: 0 -100px;
+}
+
+div#colOne {
+	background: #5B6478 url(../images/nav-top-bg.gif) top left repeat-x;
+	width: 150px;
+	float: left;
+	padding: 20px 0 0 0;
+}
+
+div#footer {
+	clear: both;
+	display: block;
+	background: #806E53 url(../images/footer-bg.jpg) top left no-repeat;
+}
+
+div#footer a {
+	background: #806E53 url(../images/footer-bg.jpg) top left no-repeat;
+	display: block;
+	height: 70px;
+	width: 700px;
+	text-decoration: none;
+	text-indent: -9999px;
+}
+
+div#content {
+	background: transparent url(../images/content-top-bg.gif) top left repeat-x;
+	padding: 30px 0 20px 1px;
+	float: left;
+	width: 549px;
+	color: #4D473A;
+	font-size: 13px;
+	min-height: 450px;
+	overflow: hidden;
+}
+
+html>body div#content {
+	height: auto;
+}
+
+* html div#content {
+	height: 450px;
+}
+
+/* Common Styles */
+/* -------------------------------- */
+
+.current {}
+
+.hide {display: none;}
+.cloak {visibility: hidden;}
+
+.floatL {float: left;}
+.floatR {float: right;}
+
+.clear {clear: both;}
+.clearL {clear: left;}
+.clearR {clear: right;}
+
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}

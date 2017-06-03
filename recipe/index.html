@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Dane Petersen: Recipe Application Prototype</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="robots" content="none" />
+<meta name="Copyright" content="Copyright (c) 2009 Dane Petersen" />
+<meta name="author" content="Dane Petersen" />
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="global.css" />
+</head>
+<body>
+<div id="content">
+  <form action="index.html" method="post">
+    <fieldset>
+      <h1>New Recipe</h1>
+      <p>Fill out this form to add a new recipe.</p>
+      <dl>
+        <dt>
+          <label>Recipe Name</label>
+        </dt>
+        <dd>
+          <input type="text" class="text required" />
+          <div class="required-notice">Oops! This is a required field.</div>
+        </dd>
+        <dt>
+          <label>Total Time</label>
+          <br />
+          <span class="optional">(optional)</span></dt>
+        <dd>
+          <select>
+            <option value="">--</option>
+            <option value="5">5 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="45">45 minutes</option>
+            <option value="60">1 hour</option>
+            <option value="120">2 hours</option>
+            <option value="180">3 hours</option>
+            <option value="240">4 hours+</option>
+          </select>
+        </dd>
+        <dt class="servings">
+          <label>Servings</label>
+        </dt>
+        <dd>
+          <div class="servings-options"><span class="servings-option">
+            <input type="radio" class="radio" name="servings" />
+            1-2</span> <span class="servings-option">
+            <input type="radio" class="radio" name="servings" />
+            3-4</span> <span class="servings-option">
+            <input type="radio" class="radio" name="servings" />
+            5-6</span> <span class="servings-option required">
+            <input type="radio" class="radio" name="servings" />
+            7+</span>
+            <div class="required-notice">Oops! This is a required field.</div>
+          </div>
+        </dd>
+        <dt class="description">
+          <label>Description</label>
+        </dt>
+        <dd>
+          <textarea class="description required" rows="40" cols="40"></textarea>
+          <div class="required-notice">Oops! This is a required field.</div>
+        </dd>
+        <dt>
+          <label>Photo</label>
+          <br />
+          <span class="optional">(optional)</span></dt>
+        <dd class="photo">
+          <input type="file" class="file" />
+          <div class="notice photo-notice">A recipe with a photo will be given a higher ranking in our recipe directory. You can always add a photo later.</div>
+        </dd>
+      </dl>
+    </fieldset>
+    <fieldset class="ingredients">
+      <h2>Ingredients</h2>
+      <ul class="ingredients-list">
+        <li class="ingredient-item ingredient-1">
+          <div class="amount-input">
+            <label>Amount</label>
+            <input type="text" class="text" />
+            <div class="notice example">Examples: 1/2 tsp, 3 cups,<br />
+              one 15 oz can, etc.</div>
+          </div>
+          <div class="ingredient-input">
+            <label>Ingredient</label>
+            <input type="text" class="text required" />
+            <div class="required-notice">Oops! This is a required field.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="add-ingredient"><a href="#"><img src="add.png" alt="add" /> Add Ingredient</a></div>
+    </fieldset>
+    <fieldset class="directions">
+      <h2>Directions</h2>
+      <ul class="steps-list">
+        <li class="step-item step-1">
+          <label>Step 1</label>
+          <input type="text" class="text required" />
+          <div class="required-notice">Oops! This is a required field.</div>
+        </li>
+      </ul>
+      <div class="add-step"><a href="#"><img src="add.png" alt="add" /> Add Step</a></div>
+      <p class="add-recipe">
+        <input type="image" class="image" src="add-recipe.jpg" />
+      </p>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>

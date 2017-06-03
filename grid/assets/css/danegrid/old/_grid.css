@@ -1,0 +1,175 @@
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
+  float: left;
+  margin-right: 2.12765957446809%;
+}
+.last { margin-right: 0 !important; }
+.span-1 { width: 6.38297872340426%; }
+.span-2 { width: 14.8936170212766%; }
+.span-3 { width: 23.404255319149%; }
+.span-4 { width: 31.9148936170213%; }
+.span-5 { width: 40.4255319148937%; }
+.span-6 { width: 48.936170212766%; }
+.span-7 { width: 57.4468085106384%; }
+.span-8 { width: 65.9574468085107%; }
+.span-9 { width: 74.4680851063831%; }
+.span-10 { width: 82.9787234042554%; }
+.span-11 { width: 91.4893617021278%; }
+.span-12 {
+  width: 100.0%;
+  margin-right: 0;
+}
+.span-11 .span-1 { margin-right: 2.32558139534884%; }
+.span-11 .span-2 { margin-right: 2.32558139534884%; }
+.span-11 .span-3 { margin-right: 2.32558139534884%; }
+.span-11 .span-4 { margin-right: 2.32558139534884%; }
+.span-11 .span-5 { margin-right: 2.32558139534884%; }
+.span-11 .span-6 { margin-right: 2.32558139534884%; }
+.span-11 .span-7 { margin-right: 2.32558139534884%; }
+.span-11 .span-8 { margin-right: 2.32558139534884%; }
+.span-11 .span-9 { margin-right: 2.32558139534884%; }
+.span-11 .span-10 { margin-right: 2.32558139534884%; }
+.span-11 .span-1 { width: 6.97674418604651%; }
+.span-11 .span-2 { width: 16.2790697674418%; }
+.span-11 .span-3 { width: 25.5813953488372%; }
+.span-11 .span-4 { width: 34.8837209302325%; }
+.span-11 .span-5 { width: 44.1860465116279%; }
+.span-11 .span-6 { width: 53.4883720930232%; }
+.span-11 .span-7 { width: 62.7906976744186%; }
+.span-11 .span-8 { width: 72.0930232558139%; }
+.span-11 .span-9 { width: 81.3953488372093%; }
+.span-11 .span-10 { width: 90.6976744186046%; }
+.span-10 .span-1 { margin-right: 2.56410256410257%; }
+.span-10 .span-2 { margin-right: 2.56410256410257%; }
+.span-10 .span-3 { margin-right: 2.56410256410257%; }
+.span-10 .span-4 { margin-right: 2.56410256410257%; }
+.span-10 .span-5 { margin-right: 2.56410256410257%; }
+.span-10 .span-6 { margin-right: 2.56410256410257%; }
+.span-10 .span-7 { margin-right: 2.56410256410257%; }
+.span-10 .span-8 { margin-right: 2.56410256410257%; }
+.span-10 .span-9 { margin-right: 2.56410256410257%; }
+.span-10 .span-10 { margin-right: 2.56410256410257%; }
+.span-10 .span-1 { width: 7.69230769230769%; }
+.span-10 .span-2 { width: 17.9487179487179%; }
+.span-10 .span-3 { width: 28.2051282051283%; }
+.span-10 .span-4 { width: 38.4615384615384%; }
+.span-10 .span-5 { width: 48.7179487179488%; }
+.span-10 .span-6 { width: 58.974358974359%; }
+.span-10 .span-7 { width: 69.2307692307693%; }
+.span-10 .span-8 { width: 79.4871794871795%; }
+.span-10 .span-9 { width: 89.7435897435898%; }
+.span-9 .span-1 { margin-right: 2.85714285714286%; }
+.span-9 .span-2 { margin-right: 2.85714285714286%; }
+.span-9 .span-3 { margin-right: 2.85714285714286%; }
+.span-9 .span-4 { margin-right: 2.85714285714286%; }
+.span-9 .span-5 { margin-right: 2.85714285714286%; }
+.span-9 .span-6 { margin-right: 2.85714285714286%; }
+.span-9 .span-7 { margin-right: 2.85714285714286%; }
+.span-9 .span-8 { margin-right: 2.85714285714286%; }
+.span-9 .span-1 { width: 8.57142857142856%; }
+.span-9 .span-2 { width: 20.0%; }
+.span-9 .span-3 { width: 31.4285714285715%; }
+.span-9 .span-4 { width: 42.8571428571428%; }
+.span-9 .span-5 { width: 54.2857142857143%; }
+.span-9 .span-6 { width: 65.7142857142857%; }
+.span-9 .span-7 { width: 77.1428571428572%; }
+.span-9 .span-8 { width: 88.5714285714285%; }
+.span-8 .span-1 { margin-right: 3.22580645161291%; }
+.span-8 .span-2 { margin-right: 3.22580645161291%; }
+.span-8 .span-3 { margin-right: 3.22580645161291%; }
+.span-8 .span-4 { margin-right: 3.22580645161291%; }
+.span-8 .span-5 { margin-right: 3.22580645161291%; }
+.span-8 .span-6 { margin-right: 3.22580645161291%; }
+.span-8 .span-7 { margin-right: 3.22580645161291%; }
+.span-8 .span-1 { width: 9.67741935483871%; }
+.span-8 .span-2 { width: 22.5806451612903%; }
+.span-8 .span-3 { width: 35.483870967742%; }
+.span-8 .span-4 { width: 48.3870967741935%; }
+.span-8 .span-5 { width: 61.2903225806452%; }
+.span-8 .span-6 { width: 74.1935483870968%; }
+.span-8 .span-7 { width: 87.0967741935485%; }
+.span-7 .span-1 { margin-right: 3.70370370370371%; }
+.span-7 .span-2 { margin-right: 3.70370370370371%; }
+.span-7 .span-3 { margin-right: 3.70370370370371%; }
+.span-7 .span-4 { margin-right: 3.70370370370371%; }
+.span-7 .span-5 { margin-right: 3.70370370370371%; }
+.span-7 .span-6 { margin-right: 3.70370370370371%; }
+.span-7 .span-1 { width: 11.1111111111111%; }
+.span-7 .span-2 { width: 25.9259259259259%; }
+.span-7 .span-3 { width: 40.7407407407408%; }
+.span-7 .span-4 { width: 55.5555555555555%; }
+.span-7 .span-5 { width: 70.3703703703704%; }
+.span-7 .span-6 { width: 85.1851851851851%; }
+.span-6 .span-1 { margin-right: 4.34782608695653%; }
+.span-6 .span-2 { margin-right: 4.34782608695653%; }
+.span-6 .span-3 { margin-right: 4.34782608695653%; }
+.span-6 .span-4 { margin-right: 4.34782608695653%; }
+.span-6 .span-5 { margin-right: 4.34782608695653%; }
+.span-6 .span-1 { width: 13.0434782608696%; }
+.span-6 .span-2 { width: 30.4347826086956%; }
+.span-6 .span-3 { width: 47.8260869565218%; }
+.span-6 .span-4 { width: 65.2173913043478%; }
+.span-6 .span-5 { width: 82.608695652174%; }
+.span-5 .span-1 { margin-right: 5.26315789473684%; }
+.span-5 .span-2 { margin-right: 5.26315789473684%; }
+.span-5 .span-3 { margin-right: 5.26315789473684%; }
+.span-5 .span-4 { margin-right: 5.26315789473684%; }
+.span-5 .span-1 { width: 15.7894736842105%; }
+.span-5 .span-2 { width: 36.8421052631578%; }
+.span-5 .span-3 { width: 57.8947368421053%; }
+.span-5 .span-4 { width: 78.9473684210525%; }
+.span-4 .span-1 { margin-right: 6.66666666666668%; }
+.span-4 .span-2 { margin-right: 6.66666666666668%; }
+.span-4 .span-3 { margin-right: 6.66666666666668%; }
+.span-4 .span-1 { width: 20%; }
+.span-4 .span-2 { width: 46.6666666666667%; }
+.span-4 .span-3 { width: 73.3333333333335%; }
+.span-3 .span-1 { margin-right: 9.09090909090909%; }
+.span-3 .span-2 { margin-right: 9.09090909090909%; }
+.span-3 .span-1 { width: 27.2727272727272%; }
+.span-3 .span-2 { width: 63.6363636363635%; }
+.span-2 .span-1 { margin-right: 14.2857142857143%; }
+.span-2 .span-1 { width: 42.8571428571429%; }
+.append-1 { padding-right: 8.51063829787235%; }
+.append-2 { padding-right: 17.0212765957447%; }
+.append-3 { padding-right: 25.5319148936171%; }
+.append-4 { padding-right: 34.0425531914894%; }
+.append-5 { padding-right: 42.5531914893618%; }
+.append-6 { padding-right: 51.0638297872341%; }
+.append-7 { padding-right: 59.5744680851065%; }
+.append-8 { padding-right: 68.0851063829788%; }
+.append-9 { padding-right: 76.5957446808512%; }
+.append-10 { padding-right: 85.1063829787235%; }
+.append-11 { padding-right: 93.6170212765959%; }
+.prepend-1 { padding-left: 8.51063829787235%; }
+.prepend-2 { padding-left: 17.0212765957447%; }
+.prepend-3 { padding-left: 25.5319148936171%; }
+.prepend-4 { padding-left: 34.0425531914894%; }
+.prepend-5 { padding-left: 42.5531914893618%; }
+.prepend-6 { padding-left: 51.0638297872341%; }
+.prepend-7 { padding-left: 59.5744680851065%; }
+.prepend-8 { padding-left: 68.0851063829788%; }
+.prepend-9 { padding-left: 76.5957446808512%; }
+.prepend-10 { padding-left: 85.1063829787235%; }
+.prepend-11 { padding-left: 93.6170212765959%; }
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+.clearfix, .container { display: block; }
+.clear { clear: both; }

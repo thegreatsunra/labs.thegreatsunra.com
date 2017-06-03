@@ -1,0 +1,106 @@
+
+div#content p {
+	font-size: 13px;
+	line-height: 1.4em;
+	padding: 3px 10px 10px 10px;
+	font-family: "trebuchet MS", verdana, helvetica, arial, sans-serif;
+}
+div#content ul, div#content ol {
+	margin: 0 0 0 40px;
+	padding: 0 20px 0 0;
+}
+div#content li {
+	line-height: 1.3em;
+	padding: 0 0 5px 0;
+	font-size: 13px;
+}
+
+div#content h1, 
+div#content h2, 
+div#content h3, 
+div#content h4, 
+div#content h5, 
+div#content h6 {
+	line-height: 1.2em;
+	color: #806E53;
+	font-family: "trebuchet MS", verdana, helvetica, arial, sans-serif;
+}
+
+div#content h1, div#content h2, div#content h3 {
+	background: transparent url(../images/content-heading.gif) top left no-repeat;
+	margin: 0 0 0 8px;
+	padding: 0 5px 0 36px;
+	letter-spacing: .2em;
+	font-weight: normal;
+}
+
+div#content h4, div#content h5, div#content h6 {
+	font-weight: bold;
+	letter-spacing: .3em;
+	margin: 0 0 0 20px;
+	padding: 3px 5px 10px 0;
+}
+
+div#content h1 {
+	font-size: 24px; padding-bottom: 5px;
+}
+
+div#content h2 {
+	font-size: 18px;
+	padding-top: 3px;
+	padding-bottom: 8px;
+	margin-left: 15px;
+}
+div#content h3 {
+	font-size: 16px;
+	padding-top: 6px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+div#content h4 {font-size: 14px;}
+div#content h5 {font-size: 12px;}
+div#content h6 {font-size: 10px;}
+
+div#content img {
+	padding: 5px;
+	background-color: #eeeeee;
+	border: 1px solid #B4A78E;
+}
+
+div#content dl {
+	padding: 3px 15px 10px 10px;
+}
+div#content dt {
+	padding: 0 0 5px 5px;
+	line-height: 1.3em;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div#content pre {
+	padding: 5px;
+	margin: 10px 20px 10px 20px;
+	border: 1px solid #B5AA95;
+	background-color: #C0B7A4;
+	color: #655E4F;
+	font-family: courier, monospace;
+	font-size: 11px;
+}
+
+div#content a {
+	color: #6D778B;
+}
+div#content a:hover, div#content a:visited:hover {
+	color: #2F394E;
+}
+/* div#content a:visited {
+	color: #938269;
+} */
+
+div#content form {
+	padding: 2px 5px 2px 8px;
+}
+div#content input, div#content textarea {
+	margin: 2px 2px 2px 5px;
+}
